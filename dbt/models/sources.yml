@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+  - name: silver
+    database: PHARMA
+    schema: SILVER
+
+    tables:
+      - name: MES
+        columns:
+          - name: batch_id
+            tests:
+              - not_null
+              - unique
+
+      - name: LIMS
+        columns:
+          - name: test_id
+            tests:
+              - not_null
+              - unique
+
+      - name: HISTORIAN
+        columns:
+          - name: reading_id
+            tests:
+              - not_null
+              - unique
+
+      - name: ERP
+        columns:
+          - name: inventory_id
+            tests:
+              - not_null
+              - unique
