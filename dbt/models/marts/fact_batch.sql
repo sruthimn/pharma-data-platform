@@ -1,3 +1,4 @@
+   -- ONE ROW PER PRODUCTION BATCH: MES + LIMS + HISTORIAN
 {{ config(materialized='table') }}
 
 SELECT
