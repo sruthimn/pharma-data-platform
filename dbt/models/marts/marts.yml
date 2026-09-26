@@ -1,0 +1,61 @@
+version: 2
+
+models:
+  - name: dim_date
+    columns:
+      - name: date_day
+        data_tests: [unique, not_null]
+
+  - name: dim_product
+    columns:
+      - name: product_code
+        data_tests: [unique, not_null]
+
+  - name: dim_site
+    columns:
+      - name: site
+        data_tests: [unique, not_null]
+
+  - name: fact_batch
+    columns:
+      - name: batch_id
+        data_tests: [unique, not_null]
+      - name: product_code
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_product')
+                field: product_code
+      - name: site
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_site')
+                field: site
+      - name: start_date
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_date')
+                field: date_day
+
+  - name: fact_quality_test
+    columns:
+      - name: test_id
+        data_tests: [unique, not_null]
+      - name: batch_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('fact_batch')
+                field: batch_id
+      - name: quality_result
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Pass', 'Fail', 'OOS']
+
+  - name: fact_inventory
+    columns:
+      - name: inventory_id
+        data_tests: [unique, not_null]
