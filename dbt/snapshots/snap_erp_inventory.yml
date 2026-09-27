@@ -1,0 +1,8 @@
+snapshots:
+  - name: snap_erp_inventory
+    relation: source('silver', 'ERP')
+    description: "SCD Type 2 history of ERP inventory. A new version is saved when AVAILABLE_QTY or INVENTORY_STATUS changes."
+    config:
+      unique_key: INVENTORY_ID
+      strategy: check
+      check_cols: ['AVAILABLE_QTY', 'INVENTORY_STATUS']
