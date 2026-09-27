@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: silver_demo
+    database: PHARMA
+    schema: SILVER
+    tables:
+      - name: CDC_DEMO_RAW
+        description: "Append-only raw load of the CDC demo. Every Snowflake load adds rows."
+
+models:
+  - name: cdc_demo
+    description: "Incremental demo model. Holds the latest version of each stock movement. Each run only processes rows loaded since the last run."
+    columns:
+      - name: MOVEMENT_ID
+        tests:
+          - unique
+          - not_null
