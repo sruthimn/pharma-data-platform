@@ -109,6 +109,29 @@
 						"resource": "https://vault.azure.net"
 					}
 				}
+			},
+			{
+				"name": "exec_cdc_demo",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "web_get_dbt_token",
+						"dependencyConditions": [
+							"Completed"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_cdc_demo",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
 			}
 		],
 		"annotations": [],
