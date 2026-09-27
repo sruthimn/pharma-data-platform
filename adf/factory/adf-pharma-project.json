@@ -1,0 +1,15 @@
+{
+	"name": "adf-pharma-project",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "44da8c7c-0706-4b68-9208-a939745ef8a4",
+		"tenantId": "2b32b1fa-7899-482e-a6de-be99c0ff5516"
+	}
+}

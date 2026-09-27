@@ -1,0 +1,17 @@
+{
+	"name": "ds_sql_erp",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sqldb_pharma",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "pharma_mes",
+			"table": "erp_inventory"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
