@@ -91,6 +91,12 @@
 						"dependencyConditions": [
 							"Succeeded"
 						]
+					},
+					{
+						"activity": "exec_cdc_demo",
+						"dependencyConditions": [
+							"Completed"
+						]
 					}
 				],
 				"policy": {
@@ -113,14 +119,7 @@
 			{
 				"name": "exec_cdc_demo",
 				"type": "ExecutePipeline",
-				"dependsOn": [
-					{
-						"activity": "web_get_dbt_token",
-						"dependencyConditions": [
-							"Completed"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"secureInput": false
 				},

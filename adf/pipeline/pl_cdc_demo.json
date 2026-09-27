@@ -187,6 +187,69 @@
 					"referenceName": "ls_databricks",
 					"type": "LinkedServiceReference"
 				}
+			},
+			{
+				"name": "web_get_dbt_token_demo",
+				"type": "WebActivity",
+				"dependsOn": [
+					{
+						"activity": "dbx_cdc_demo",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": true,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "GET",
+					"url": "https://kv-pharma-sruthi.vault.azure.net/secrets/dbt-service-token?api-version=7.4",
+					"authentication": {
+						"type": "MSI",
+						"resource": "https://vault.azure.net"
+					}
+				}
+			},
+			{
+				"name": "web_dbt_cdc_demo",
+				"description": "Triggers dbt Cloud job CDC demo build (Snowflake raw load and incremental gold model)",
+				"type": "WebActivity",
+				"dependsOn": [
+					{
+						"activity": "web_get_dbt_token_demo",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"headers": {
+						"Authorization": {
+							"value": "@concat('Token ', activity('web_get_dbt_token_demo').output.value)",
+							"type": "Expression"
+						},
+						"Content-Type": "application/json"
+					},
+					"url": "https://ue536.us1.dbt.com/api/v2/accounts/70506183165571/jobs/70506183140527/run/",
+					"body": {
+						"cause": "Triggered by ADF pl_cdc_demo"
+					}
+				}
 			}
 		],
 		"annotations": []
