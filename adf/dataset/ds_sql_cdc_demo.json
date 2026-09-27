@@ -1,0 +1,45 @@
+{
+	"name": "ds_sql_cdc_demo",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sqldb_pharma",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "movement_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "material_id",
+				"type": "varchar"
+			},
+			{
+				"name": "site",
+				"type": "varchar"
+			},
+			{
+				"name": "quantity",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 2
+			},
+			{
+				"name": "movement_type",
+				"type": "varchar"
+			},
+			{
+				"name": "last_modified",
+				"type": "datetime2",
+				"scale": 7
+			}
+		],
+		"typeProperties": {
+			"schema": "pharma_mes",
+			"table": "cdc_demo_stock_movements"
+		}
+	}
+}
