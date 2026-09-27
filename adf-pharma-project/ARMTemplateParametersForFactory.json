@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-pharma-project"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"ls_pharmadatalakeuk_accountKey": {
+			"value": ""
+		},
+		"ls_sqldb_pharma_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://pharmadatalakeuk.dfs.core.windows.net/"
+		},
+		"ls_keyvault_properties_typeProperties_baseUrl": {
+			"value": "https://kv-pharma-sruthi.vault.azure.net/"
+		},
+		"ls_pharmadatalakeuk_properties_typeProperties_url": {
+			"value": "https://pharmadatalakeuk.dfs.core.windows.net/"
+		},
+		"ls_sqldb_pharma_properties_typeProperties_server": {
+			"value": "sqlserveruktraining.database.windows.net"
+		},
+		"ls_sqldb_pharma_properties_typeProperties_database": {
+			"value": "sqldb"
+		},
+		"ls_sqldb_pharma_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		}
+	}
+}

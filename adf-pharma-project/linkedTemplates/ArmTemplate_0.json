@@ -1,0 +1,1206 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adf-pharma-project"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
+		},
+		"ls_pharmadatalakeuk_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_pharmadatalakeuk'"
+		},
+		"ls_sqldb_pharma_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_sqldb_pharma'"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://pharmadatalakeuk.dfs.core.windows.net/"
+		},
+		"ls_keyvault_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://kv-pharma-sruthi.vault.azure.net/"
+		},
+		"ls_pharmadatalakeuk_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://pharmadatalakeuk.dfs.core.windows.net/"
+		},
+		"ls_sqldb_pharma_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sqlserveruktraining.database.windows.net"
+		},
+		"ls_sqldb_pharma_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "sqldb"
+		},
+		"ls_sqldb_pharma_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sqladmin"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureDataLakeStorage1')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobFS",
+				"typeProperties": {
+					"url": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]",
+					"accountKey": {
+						"type": "SecureString",
+						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ls_keyvault')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureKeyVault",
+				"typeProperties": {
+					"baseUrl": "[parameters('ls_keyvault_properties_typeProperties_baseUrl')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ls_pharmadatalakeuk')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobFS",
+				"typeProperties": {
+					"url": "[parameters('ls_pharmadatalakeuk_properties_typeProperties_url')]",
+					"accountKey": {
+						"type": "SecureString",
+						"value": "[parameters('ls_pharmadatalakeuk_accountKey')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ls_sqldb_pharma')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureSqlDatabase",
+				"typeProperties": {
+					"server": "[parameters('ls_sqldb_pharma_properties_typeProperties_server')]",
+					"database": "[parameters('ls_sqldb_pharma_properties_typeProperties_database')]",
+					"encrypt": "mandatory",
+					"trustServerCertificate": false,
+					"authenticationType": "SQL",
+					"userName": "[parameters('ls_sqldb_pharma_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('ls_sqldb_pharma_password')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureSqlTable1')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_sqldb_pharma",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [
+					{
+						"name": "inventory_id",
+						"type": "varchar"
+					},
+					{
+						"name": "material_id",
+						"type": "varchar"
+					},
+					{
+						"name": "material_name",
+						"type": "varchar"
+					},
+					{
+						"name": "material_type",
+						"type": "varchar"
+					},
+					{
+						"name": "product_code",
+						"type": "varchar"
+					},
+					{
+						"name": "site",
+						"type": "varchar"
+					},
+					{
+						"name": "available_qty",
+						"type": "varchar"
+					},
+					{
+						"name": "uom",
+						"type": "varchar"
+					},
+					{
+						"name": "reorder_level",
+						"type": "decimal",
+						"precision": 18,
+						"scale": 2
+					},
+					{
+						"name": "expected_delivery_date",
+						"type": "varchar"
+					},
+					{
+						"name": "supplier",
+						"type": "varchar"
+					},
+					{
+						"name": "last_updated",
+						"type": "varchar"
+					}
+				],
+				"typeProperties": {
+					"schema": "pharma_mes",
+					"table": "erp_inventory"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_sqldb_pharma')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureSqlTable2')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_sqldb_pharma",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [
+					{
+						"name": "inventory_id",
+						"type": "varchar"
+					},
+					{
+						"name": "material_id",
+						"type": "varchar"
+					},
+					{
+						"name": "material_name",
+						"type": "varchar"
+					},
+					{
+						"name": "material_type",
+						"type": "varchar"
+					},
+					{
+						"name": "product_code",
+						"type": "varchar"
+					},
+					{
+						"name": "site",
+						"type": "varchar"
+					},
+					{
+						"name": "available_qty",
+						"type": "varchar"
+					},
+					{
+						"name": "uom",
+						"type": "varchar"
+					},
+					{
+						"name": "reorder_level",
+						"type": "decimal",
+						"precision": 18,
+						"scale": 2
+					},
+					{
+						"name": "expected_delivery_date",
+						"type": "varchar"
+					},
+					{
+						"name": "supplier",
+						"type": "varchar"
+					},
+					{
+						"name": "last_updated",
+						"type": "varchar"
+					}
+				],
+				"typeProperties": {
+					"schema": "pharma_mes",
+					"table": "erp_inventory"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_sqldb_pharma')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DelimitedText1')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_pharmadatalakeuk",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": "erp_inventory.csv",
+						"folderPath": "erp",
+						"fileSystem": "landing"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "inventory_id",
+						"type": "String"
+					},
+					{
+						"name": "material_id",
+						"type": "String"
+					},
+					{
+						"name": "material_name",
+						"type": "String"
+					},
+					{
+						"name": "material_type",
+						"type": "String"
+					},
+					{
+						"name": "product_code",
+						"type": "String"
+					},
+					{
+						"name": "site",
+						"type": "String"
+					},
+					{
+						"name": "available_qty",
+						"type": "String"
+					},
+					{
+						"name": "uom",
+						"type": "String"
+					},
+					{
+						"name": "reorder_level",
+						"type": "String"
+					},
+					{
+						"name": "expected_delivery_date",
+						"type": "String"
+					},
+					{
+						"name": "supplier",
+						"type": "String"
+					},
+					{
+						"name": "last_updated",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_pharmadatalakeuk')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DelimitedText2')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_pharmadatalakeuk",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": "historian_readings.csv",
+						"folderPath": "historian",
+						"fileSystem": "landing"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "reading_id",
+						"type": "String"
+					},
+					{
+						"name": "batch_id",
+						"type": "String"
+					},
+					{
+						"name": "equipment_id",
+						"type": "String"
+					},
+					{
+						"name": "reading_timestamp",
+						"type": "String"
+					},
+					{
+						"name": "temperature",
+						"type": "String"
+					},
+					{
+						"name": "pressure",
+						"type": "String"
+					},
+					{
+						"name": "ph",
+						"type": "String"
+					},
+					{
+						"name": "flow_rate",
+						"type": "String"
+					},
+					{
+						"name": "temperature_unit",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_pharmadatalakeuk')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DelimitedText3')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_pharmadatalakeuk",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"folderPath": "historian",
+						"fileSystem": "bronze"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_pharmadatalakeuk')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DelimitedText4')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureDataLakeStorage1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": "erp_inventory.csv",
+						"folderPath": "erp",
+						"fileSystem": "bronze"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStorage1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_bronze_erp')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_pharmadatalakeuk",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": "erp_inventory.csv",
+						"folderPath": "erp",
+						"fileSystem": "bronze"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_pharmadatalakeuk')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_bronze_lims')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_pharmadatalakeuk",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": "lims_results.csv",
+						"folderPath": "lims",
+						"fileSystem": "bronze"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_pharmadatalakeuk')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_bronze_mes')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_pharmadatalakeuk",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": "mes_batches.csv",
+						"folderPath": "mes",
+						"fileSystem": "bronze"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "test_id",
+						"type": "String"
+					},
+					{
+						"name": "batch_id",
+						"type": "String"
+					},
+					{
+						"name": "test_name",
+						"type": "String"
+					},
+					{
+						"name": "unit",
+						"type": "String"
+					},
+					{
+						"name": "lower_spec_limit",
+						"type": "String"
+					},
+					{
+						"name": "upper_spec_limit",
+						"type": "String"
+					},
+					{
+						"name": "test_result",
+						"type": "String"
+					},
+					{
+						"name": "result_status",
+						"type": "String"
+					},
+					{
+						"name": "release_status",
+						"type": "String"
+					},
+					{
+						"name": "test_date",
+						"type": "String"
+					},
+					{
+						"name": "analyst_id",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_pharmadatalakeuk')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_landing_erp')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_pharmadatalakeuk",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": "erp_inventory.csv",
+						"folderPath": "erp",
+						"fileSystem": "landing"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "inventory_id",
+						"type": "String"
+					},
+					{
+						"name": "material_id",
+						"type": "String"
+					},
+					{
+						"name": "material_name",
+						"type": "String"
+					},
+					{
+						"name": "material_type",
+						"type": "String"
+					},
+					{
+						"name": "product_code",
+						"type": "String"
+					},
+					{
+						"name": "site",
+						"type": "String"
+					},
+					{
+						"name": "available_qty",
+						"type": "String"
+					},
+					{
+						"name": "uom",
+						"type": "String"
+					},
+					{
+						"name": "reorder_level",
+						"type": "String"
+					},
+					{
+						"name": "expected_delivery_date",
+						"type": "String"
+					},
+					{
+						"name": "supplier",
+						"type": "String"
+					},
+					{
+						"name": "last_updated",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_pharmadatalakeuk')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_landing_lims')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_pharmadatalakeuk",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": "lims_results.csv",
+						"folderPath": "lims",
+						"fileSystem": "landing"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "test_id",
+						"type": "String"
+					},
+					{
+						"name": "batch_id",
+						"type": "String"
+					},
+					{
+						"name": "test_name",
+						"type": "String"
+					},
+					{
+						"name": "unit",
+						"type": "String"
+					},
+					{
+						"name": "lower_spec_limit",
+						"type": "String"
+					},
+					{
+						"name": "upper_spec_limit",
+						"type": "String"
+					},
+					{
+						"name": "test_result",
+						"type": "String"
+					},
+					{
+						"name": "result_status",
+						"type": "String"
+					},
+					{
+						"name": "release_status",
+						"type": "String"
+					},
+					{
+						"name": "test_date",
+						"type": "String"
+					},
+					{
+						"name": "analyst_id",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_pharmadatalakeuk')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_sql_erp')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_sqldb_pharma",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "pharma_mes",
+					"table": "erp_inventory"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_sqldb_pharma')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_sql_erp1')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_sqldb_pharma",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [
+					{
+						"name": "inventory_id",
+						"type": "varchar"
+					},
+					{
+						"name": "material_id",
+						"type": "varchar"
+					},
+					{
+						"name": "material_name",
+						"type": "varchar"
+					},
+					{
+						"name": "material_type",
+						"type": "varchar"
+					},
+					{
+						"name": "product_code",
+						"type": "varchar"
+					},
+					{
+						"name": "site",
+						"type": "varchar"
+					},
+					{
+						"name": "available_qty",
+						"type": "varchar"
+					},
+					{
+						"name": "uom",
+						"type": "varchar"
+					},
+					{
+						"name": "reorder_level",
+						"type": "decimal",
+						"precision": 18,
+						"scale": 2
+					},
+					{
+						"name": "expected_delivery_date",
+						"type": "varchar"
+					},
+					{
+						"name": "supplier",
+						"type": "varchar"
+					},
+					{
+						"name": "last_updated",
+						"type": "varchar"
+					}
+				],
+				"typeProperties": {
+					"schema": "pharma_mes",
+					"table": "erp_inventory"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_sqldb_pharma')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_sql_mes')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_sqldb_pharma",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [
+					{
+						"name": "batch_id",
+						"type": "nvarchar"
+					},
+					{
+						"name": "site",
+						"type": "nvarchar"
+					},
+					{
+						"name": "production_line",
+						"type": "nvarchar"
+					},
+					{
+						"name": "product_code",
+						"type": "nvarchar"
+					},
+					{
+						"name": "therapy_area",
+						"type": "nvarchar"
+					},
+					{
+						"name": "planned_qty",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "actual_qty",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "yield_pct",
+						"type": "nvarchar"
+					},
+					{
+						"name": "batch_status",
+						"type": "nvarchar"
+					},
+					{
+						"name": "deviation_flag",
+						"type": "nvarchar"
+					},
+					{
+						"name": "start_time",
+						"type": "datetime2",
+						"scale": 7
+					},
+					{
+						"name": "end_time",
+						"type": "datetime2",
+						"scale": 7
+					}
+				],
+				"typeProperties": {
+					"schema": "pharma_mes",
+					"table": "mes_batches"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_sqldb_pharma')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ls_databricks')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureDatabricks",
+				"typeProperties": {
+					"domain": "https://adb-7405618922501695.15.azuredatabricks.net",
+					"accessToken": {
+						"type": "AzureKeyVaultSecret",
+						"store": {
+							"referenceName": "ls_keyvault",
+							"type": "LinkedServiceReference"
+						},
+						"secretName": "databricks-token"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_keyvault')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/pl_landing_to_bronze')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "cp_lims",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "DelimitedTextSource",
+								"storeSettings": {
+									"type": "AzureBlobFSReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								},
+								"formatSettings": {
+									"type": "DelimitedTextReadSettings"
+								}
+							},
+							"sink": {
+								"type": "DelimitedTextSink",
+								"storeSettings": {
+									"type": "AzureBlobFSWriteSettings"
+								},
+								"formatSettings": {
+									"type": "DelimitedTextWriteSettings",
+									"quoteAllText": true,
+									"fileExtension": ".txt"
+								}
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "ds_landing_lims",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "ds_bronze_lims",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					},
+					{
+						"name": "cp_mes",
+						"type": "Copy",
+						"dependsOn": [
+							{
+								"activity": "cp_lims",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "AzureSqlSource",
+								"queryTimeout": "02:00:00",
+								"partitionOption": "None"
+							},
+							"sink": {
+								"type": "DelimitedTextSink",
+								"storeSettings": {
+									"type": "AzureBlobFSWriteSettings"
+								},
+								"formatSettings": {
+									"type": "DelimitedTextWriteSettings",
+									"quoteAllText": true,
+									"fileExtension": ".txt"
+								}
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "ds_sql_mes",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "ds_bronze_mes",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					},
+					{
+						"name": "cp_historian",
+						"type": "Copy",
+						"dependsOn": [
+							{
+								"activity": "cp_erp",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "DelimitedTextSource",
+								"storeSettings": {
+									"type": "AzureBlobFSReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								},
+								"formatSettings": {
+									"type": "DelimitedTextReadSettings"
+								}
+							},
+							"sink": {
+								"type": "DelimitedTextSink",
+								"storeSettings": {
+									"type": "AzureBlobFSWriteSettings"
+								},
+								"formatSettings": {
+									"type": "DelimitedTextWriteSettings",
+									"quoteAllText": true,
+									"fileExtension": ".txt"
+								}
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "DelimitedText2",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "DelimitedText3",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					},
+					{
+						"name": "cp_erp",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "AzureSqlSource",
+								"queryTimeout": "02:00:00",
+								"partitionOption": "None"
+							},
+							"sink": {
+								"type": "DelimitedTextSink",
+								"storeSettings": {
+									"type": "AzureBlobFSWriteSettings"
+								},
+								"formatSettings": {
+									"type": "DelimitedTextWriteSettings",
+									"quoteAllText": true,
+									"fileExtension": ".txt"
+								}
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "ds_sql_erp1",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "ds_bronze_erp",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"annotations": [],
+				"lastPublishTime": "2026-09-24T01:18:41Z"
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/ds_landing_lims')]",
+				"[concat(variables('factoryId'), '/datasets/ds_bronze_lims')]",
+				"[concat(variables('factoryId'), '/datasets/ds_sql_mes')]",
+				"[concat(variables('factoryId'), '/datasets/ds_bronze_mes')]",
+				"[concat(variables('factoryId'), '/datasets/DelimitedText2')]",
+				"[concat(variables('factoryId'), '/datasets/DelimitedText3')]",
+				"[concat(variables('factoryId'), '/datasets/ds_sql_erp1')]",
+				"[concat(variables('factoryId'), '/datasets/ds_bronze_erp')]"
+			]
+		}
+	]
+}
