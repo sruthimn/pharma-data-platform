@@ -1,0 +1,68 @@
+{
+	"name": "ds_sql_erp1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sqldb_pharma",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "inventory_id",
+				"type": "varchar"
+			},
+			{
+				"name": "material_id",
+				"type": "varchar"
+			},
+			{
+				"name": "material_name",
+				"type": "varchar"
+			},
+			{
+				"name": "material_type",
+				"type": "varchar"
+			},
+			{
+				"name": "product_code",
+				"type": "varchar"
+			},
+			{
+				"name": "site",
+				"type": "varchar"
+			},
+			{
+				"name": "available_qty",
+				"type": "varchar"
+			},
+			{
+				"name": "uom",
+				"type": "varchar"
+			},
+			{
+				"name": "reorder_level",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "expected_delivery_date",
+				"type": "varchar"
+			},
+			{
+				"name": "supplier",
+				"type": "varchar"
+			},
+			{
+				"name": "last_updated",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "pharma_mes",
+			"table": "erp_inventory"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

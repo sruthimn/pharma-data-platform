@@ -1,0 +1,25 @@
+{
+	"name": "tr_daily_pharma",
+	"properties": {
+		"description": "Runs the end-to-end pipeline once a day",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_pharma_end_to_end",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2026-09-26T22:20:00",
+				"timeZone": "GMT Standard Time"
+			}
+		}
+	}
+}

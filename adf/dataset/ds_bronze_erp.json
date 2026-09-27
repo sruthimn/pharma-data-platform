@@ -1,0 +1,25 @@
+{
+	"name": "ds_bronze_erp",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_pharmadatalakeuk",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "erp_inventory.csv",
+				"folderPath": "erp",
+				"fileSystem": "bronze"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

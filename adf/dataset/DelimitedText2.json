@@ -1,0 +1,62 @@
+{
+	"name": "DelimitedText2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_pharmadatalakeuk",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "historian_readings.csv",
+				"folderPath": "historian",
+				"fileSystem": "landing"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "reading_id",
+				"type": "String"
+			},
+			{
+				"name": "batch_id",
+				"type": "String"
+			},
+			{
+				"name": "equipment_id",
+				"type": "String"
+			},
+			{
+				"name": "reading_timestamp",
+				"type": "String"
+			},
+			{
+				"name": "temperature",
+				"type": "String"
+			},
+			{
+				"name": "pressure",
+				"type": "String"
+			},
+			{
+				"name": "ph",
+				"type": "String"
+			},
+			{
+				"name": "flow_rate",
+				"type": "String"
+			},
+			{
+				"name": "temperature_unit",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

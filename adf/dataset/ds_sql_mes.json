@@ -1,0 +1,70 @@
+{
+	"name": "ds_sql_mes",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sqldb_pharma",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "batch_id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "site",
+				"type": "nvarchar"
+			},
+			{
+				"name": "production_line",
+				"type": "nvarchar"
+			},
+			{
+				"name": "product_code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "therapy_area",
+				"type": "nvarchar"
+			},
+			{
+				"name": "planned_qty",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "actual_qty",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "yield_pct",
+				"type": "nvarchar"
+			},
+			{
+				"name": "batch_status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "deviation_flag",
+				"type": "nvarchar"
+			},
+			{
+				"name": "start_time",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "end_time",
+				"type": "datetime2",
+				"scale": 7
+			}
+		],
+		"typeProperties": {
+			"schema": "pharma_mes",
+			"table": "mes_batches"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
