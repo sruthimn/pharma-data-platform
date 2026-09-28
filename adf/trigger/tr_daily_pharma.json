@@ -3,7 +3,7 @@
 	"properties": {
 		"description": "Runs the end-to-end pipeline once a day",
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [
 			{
 				"pipelineReference": {
