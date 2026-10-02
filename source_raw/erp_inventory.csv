@@ -1,0 +1,519 @@
+inventory_id,material_id,material_name,material_type,product_code,site,available_qty,uom,reorder_level,expected_delivery_date,supplier,last_updated
+INV-0001,API-001,Active ingredient 01,API,PH_INF_01,Wuxi,333,kg,180,2025-02-14,Apex Ingredients,2024-12-18 19:18:50
+INV-0002,API-001,Active ingredient 01,API,PH_INF_01,Dublin,279,kg,170,,Apex Ingredients,2024-12-19 06:40:04
+INV-0003,API-001,Active ingredient 01,API,PH_INF_01,Singapore,0,kg,70,02/01/2025,Apex Ingredients,2024-12-25 18:58:51
+INV-0004,API-001,Active ingredient 01,API,PH_INF_01,Houston,306,kg,200,,Apex Ingredients,2024-12-17 11:44:32
+INV-0005,API-002,Active ingredient 02,API,PH_INF_01,Wuxi,222,kg,60,,BioSource Ltd,2024-12-26 10:04:32
+INV-0006,API-002,Active ingredient 02,API,PH_INF_01,Dublin,201,kg,80,,BioSource Ltd,2024-12-25 23:09:33
+INV-0007,API-002,Active ingredient 02,API,PH_INF_01,Singapore,174,kg,90,2025-02-16,BioSource Ltd,2024-12-16 19:42:05
+INV-0008,API-002,Active ingredient 02,API,PH_INF_01,Houston,162,kg,90,2024-12-12,BioSource Ltd,2024-12-22 18:31:16
+INV-0009,API-003,Active ingredient 03,API,PH_IMM_02,Wuxi,110,kg,160,2025-02-05,BioSource Ltd,2024-12-18 05:57:20
+INV-0010,API-003,Active ingredient 03,api,PH_IMM_02,Dublin,207,kg,110,,BioSource Ltd,2024-12-19 15:32:01
+INV-0011,API-003,Active ingredient 03,API,PH_IMM_02,Singapore,190,kg,60,,BioSource Ltd,2024-12-15 15:51:42
+INV-0012,API-003,Active ingredient 03,API,PH_IMM_02,Houston,493,kg,150,,BioSource Ltd,2024-12-20 08:23:27
+INV-0013,API-004,Active ingredient 04,API,PH_ONC_01,Wuxi,261,kg,90,2025-01-12,Sigma Chemicals,2024-12-26 20:37:18
+INV-0013,API-004,Active ingredient 04,API,PH_ONC_01,Wuxi,260,kg,90,2025-01-12,Sigma Chemicals,2024-12-17 20:37:18
+INV-0014,API-004,Active ingredient 04,API,PH_ONC_01,Dublin,375,kg,120,,Sigma Chemicals,2024-12-22 19:58:03
+INV-0015,API-004,Active ingredient 04,API,PH_ONC_01,Singapore,320,kg,120,2025-02-12,Sigma Chemicals,2024-12-25 10:29:07
+INV-0016,API-004,Active ingredient 04,API,PH_ONC_01,Houston,246,kg,80,,Sigma Chemicals,2024-12-30 14:31:03
+INV-0017,API-005,Active ingredient 05,API,PH_RESP_01,Wuxi,122,kg,80,,Sigma Chemicals,30/12/2024 11:03
+INV-0018,API-005,Active ingredient 05,API,PH_RESP_01,Dublin,148,kg,70,,Sigma Chemicals,2024-12-22 14:24:53
+INV-0019,API-005,Active ingredient 05,API,PH_RESP_01,Singapore,82,kg,100,2025-01-10,Sigma Chemicals,27/12/2024 19:20
+INV-0020,API-005,Active ingredient 05,API,PH_RESP_01,Houston,136,kg,100,,Sigma Chemicals,2024-12-31 18:55:27
+INV-0021,API-006,Active ingredient 06,API,PH_IMM_01,Wuxi,684,kg,220,,Apex Ingredients,2024-12-26 10:35:17
+INV-0022,API-006,Active ingredient 06,API,PH_IMM_01,Dublin,391,kg,120,,Apex Ingredients,2024-12-25 21:28:03
+INV-0023,API-006,Active ingredient 06,API,PH_IMM_01,Singapore,251,kg,110,2025-01-22,Apex Ingredients,2024-12-28 06:18:47
+INV-0024,API-006,Active ingredient 06,API,PH_IMM_01,Houston,883,kg,280,,APEX INGREDIENTS,2024-12-22 04:11:30
+INV-0025,API-007,Active ingredient 07,API,PH_CARD_01,Wuxi,43,kg,80,,BioSource Ltd,2024-12-22 04:48:59
+INV-0026,API-007,Active ingredient 07,API,,Dublin,883,kg,260,,BioSource Ltd,2024-12-12 15:44:55
+INV-0027,API-007,Active ingredient 07,API,PH_CARD_01,Singapore,971,kg,260,,BioSource Ltd,2024-12-12 14:29:48
+INV-0028,API-007,Active ingredient 07,API,PH_CARD_01,Houston,721,kg,260,,BioSource Ltd,2024-12-12 03:28:51
+INV-0028,API-007,Active ingredient 07,API,PH_CARD_01,Houston,721,kg,260,,BioSource Ltd,2024-12-12 03:28:51
+INV-0029,API-008,Active ingredient 08,API,PH_CARD_02,Wuxi,420,kg,250,,Apex Ingredients,2024-12-23 09:43:43
+INV-0030,API-008,Active ingredient 08,API,PH_CARD_02,Dublin,172,kg,110,,Apex Ingredients,2024-12-23 04:12:03
+INV-0031,API-008,Active ingredient 08,API,PH_CARD_02,Singapore,467,kg,150,2025-02-16,Apex Ingredients,2024-12-27 19:57:51
+INV-0032,API-008,Active ingredient 08,API,PH_CARD_02,Houston,16,kg,60,,Apex Ingredients,2024-12-18 07:59:26
+INV-0033,API-009,Active ingredient 09,API,PH_CARD_02,Wuxi,230,kg,120,,Sigma Chemicals,2024-12-23 12:32:45
+INV-0034,API-009,Active ingredient 09,API,PH_CARD_02,Dublin,688,kg,180,,Sigma Chemicals,2024-12-20 21:54:12
+INV-0035,API-009,Active ingredient 09,API,PH_CARD_02,Singapore,857,kg,240,,Sigma Chemicals,2024-12-16 20:06:23
+INV-0036,API-009,Active ingredient 09,API,PH_CARD_02,Houston ,194,kg,160,,Sigma Chemicals,2024-12-27 02:36:12
+INV-0037,API-010,Active ingredient 10,API,PH_CARD_02,Wuxi,435,kg,140,,Apex Ingredients,2024-12-16 10:47:34
+INV-0038,API-010,Active ingredient 10,API,PH_CARD_02,Dublin,513,kg,180,,Apex Ingredients,2024-12-28 08:01:04
+INV-0038,API-010,Active ingredient 10,API,PH_CARD_02,Dublin,513,kg,180,,Apex Ingredients,2024-12-28 08:01:04
+INV-0039,API-010,Active ingredient 10,API,PH_CARD_02,Singapore,648,kg,220,,Apex Ingredients,2024-12-21 13:47:28
+INV-0040,API-010,Active ingredient 10,API,PH_CARD_02,houston,139,kg,100,,Apex Ingredients,2024-12-30 21:35:09
+INV-0041,API-011,Active ingredient 11,API,PH_IMM_02,Wuxi,810,kg,250,,Apex Ingredients,2024-12-18 18:38:20
+INV-0042,API-011,Active ingredient 11,API,PH_IMM_02,Dublin,207,kg,100,2025-02-14,Apex Ingredients,2024-12-27 14:58:36
+INV-0043,API-011,Active ingredient 11,API,PH_IMM_02,Singapore,350,kg,140,17/02/2025,Apex Ingredients,2024-12-31 14:03:28
+INV-0044,API-011,Active ingredient 11,API,PH_IMM_02,Houston,313,kg,100,,APEX INGREDIENTS,2024-12-12 02:30:04
+INV-0045,API-012,Active ingredient 12,API,PH_NEU_01,Wuxi,634,kg,160,,BioSource Ltd,2024-12-22 18:24:34
+INV-0046,API-012,Active ingredient 12,API,PH_NEU_01,Dublin,,kg,240,,BioSource Ltd,2024-12-18 22:14:14
+INV-0047,API-012,Active ingredient 12,API,PH_NEU_01,Singapore,82,kg,110,2024-12-07,BioSource Ltd,15/12/2024 18:19
+INV-0048,API-012,Active ingredient 12,API,PH_NEU_01,Houston,725,kg,270,,BioSource Ltd,2024-12-29 00:30:38
+INV-0049,API-013,Active ingredient 13,API,PH_INF_02,Wuxi,"1,025",kg,270,2025-01-17,Sigma Chemicals,2024-12-31 13:17:23
+INV-0050,API-013,Active ingredient 13,API,PH_INF_02,Dublin,172,kg,80,2025-02-03,Sigma Chemicals,2024-12-26 19:18:11
+INV-0050,API-013,Active ingredient 13,API,PH_INF_02,Dublin,122,kg,80,2025-02-03,Sigma Chemicals,2024-12-19 19:18:11
+INV-0051,API-013,Active ingredient 13,API,PH_INF_02,SINGAPORE,596,kg,200,,Sigma Chemicals,2024-12-14 14:46:34
+INV-0052,API-013,Active ingredient 13,API,PH_INF_02,Houston,687,kg,190,2025-02-17,Sigma Chemicals,2024-12-15 01:26:22
+INV-0053,API-014,Active ingredient 14,API,PH_NEU_01,Wuxi,111,kg,70,,Apex Ingredients,2024-12-20 20:50:36
+INV-0054,API-014,Active ingredient 14,API,PH_NEU_01,Dublin,730,kg,240,2025-01-12,Apex Ingredients,2024-12-12 04:12:36
+INV-0055,API-014,Active ingredient 14,API ,PH_NEU_01,Singapore,,kg,280,,Apex Ingredients,2024-12-15 12:46:42
+INV-0056,API-014,Active ingredient 14,API,PH_NEU_01,HOUSTON,251,kg,80,2025-02-14,Apex Ingredients,2024-12-13 07:15:50
+INV-0057,API-015,Active ingredient 15,api,PH_IMM_02,Wuxi,500,kg,240,,Apex Ingredients,2024-12-20 11:57:17
+INV-0058,API-015,Active ingredient 15,API,PH_IMM_02,Dublin,288,kg,130,2024-12-13,Apex Ingredients,2024-12-23 06:33:18
+INV-0059,API-015,Active ingredient 15,API,PH_IMM_02,Singapore,311,kg,100,,Apex Ingredients,2024-12-15 00:14:01
+INV-0060,API-015,Active ingredient 15,API,PH_IMM_02,Houston,296,kg,180,,Apex Ingredients,2024-12-23 08:49:00
+INV-0061,API-016,Active ingredient 16,API,PH_ONC_01,Wuxi,584,kg,160,,BioSource Ltd,2024-12-19 07:59:25
+INV-0062,API-016,Active ingredient 16,API,PH_ONC_01,Dublin,252,kg,300,2024-12-12,BioSource Ltd,2024-12-26 09:24:58
+INV-0063,API-016,Active ingredient 16,API,PH_ONC_01,Singapore,885,kg,240,,BioSource Ltd,2024-12-25 09:19:29
+INV-0064,API-016,Active ingredient 16,API,PH_ONC_01,Houston ,494,kg,190,,BioSource Ltd,2024-12-21 13:57:54
+INV-0065,API-017,Active ingredient 17,API,PH_IMM_02,Wuxi,696,kg,280,,Sigma Chemicals,15/12/2024 01:11
+INV-0066,API-017,Active ingredient 17,API,PH_IMM_02,Dublin,781,kg,250,,Sigma Chemicals,2024-12-19 22:23:52
+INV-0067,API-017,Active ingredient 17,API,PH_IMM_02,Singapore,498,kg,150,,Sigma Chemicals,2024-12-27 23:09:07
+INV-0068,API-017,Active ingredient 17,API,PH_IMM_02,Houston,191,kg,110,,Sigma Chemicals,2024-12-31 18:08:56
+INV-0069,API-018,Active ingredient 18,API,PH_RESP_01,Wuxi,402,kg,170,,Sigma Chemicals,2024-12-23 01:16:46
+INV-0070,API-018,Active ingredient 18,API,PH_RESP_01,Dublin,767,kg,220,,Sigma Chemicals,2024-12-13 10:32:50
+INV-0071,API-018,Active ingredient 18,API,PH_RESP_01,Singapore,542,kg,260,,Sigma Chemicals,2024-12-30 08:12:21
+INV-0072,API-018,Active ingredient 18,API,PH_RESP_01,Houston,473,kg,120,,Sigma Chemicals,2024-12-28 18:01:01
+INV-0073,API-019,Active ingredient 19,API,PH_CARD_02,Wuxi,773,kg,240,2025-01-10,BioSource Ltd,2024-12-20 22:30:21
+INV-0074,API-019,Active ingredient 19,API,PH_CARD_02,Dublin,537,kg,260,,BioSource Ltd,2024-12-26 13:47:21
+INV-0075,API-019,Active ingredient 19,API,PH_CARD_02,Singapore,552,kg,170,2025-02-02,BioSource Ltd,2024-12-26 20:12:10
+INV-0076,API-019,Active ingredient 19,API,PH_CARD_02,Houston,333,kg,140,06/02/2025,BioSource Ltd,2024-12-31 03:55:22
+INV-0077,API-020,Active ingredient 20,API,PH_CARD_01,Wuxi,331,kg,140,,Sigma Chemicals,2024-12-24 14:30:06
+INV-0078,API-020,Active ingredient 20,API,PH_CARD_01,Dublin,434,kg,200,,Sigma Chemicals,2024-12-13 16:22:08
+INV-0079,API-020,Active ingredient 20,API,PH_CARD_01,Singapore,288,kg,150,2025-02-02,Sigma Chemicals,2024-12-14 19:34:38
+INV-0080,API-020,Active ingredient 20,API,PH_CARD_01,Houston,352,kg,110,,Sigma Chemicals,2024-12-31 01:27:13
+INV-0081,API-021,Active ingredient 21,API,PH_NEU_01,Wuxi,188,kg,110,2025-01-18,SIGMA CHEMICALS,2024-12-20 01:35:11
+INV-0082,API-021,Active ingredient 21,API,PH_NEU_01,Dublin,467,kg,240,,Sigma Chemicals,2024-12-22 01:19:14
+INV-0083,API-021,Active ingredient 21,API,PH_NEU_01,Singapore,467,kg,190,2025-02-05,Sigma Chemicals,2024-12-21 07:46:58
+INV-0084,API-021,Active ingredient 21,API,PH_NEU_01,Houston,51,kg,190,2025-01-18,Sigma Chemicals,2024-12-25 17:31:29
+INV-0085,API-022,Active ingredient 22,API,PH_CARD_01,Wuxi,410,kg,140,,BioSource Ltd,24/12/2024 17:21
+INV-0086,API-022,Active ingredient 22,API,PH_CARD_01,Dublin,0,kg,260,2025-01-06,BioSource Ltd,2024-12-14 05:32:05
+INV-0087,API-022,Active ingredient 22,API,PH_CARD_01,Singapore,976,kg,250,,BioSource Ltd,2024-12-26 16:03:34
+INV-0088,API-022,Active ingredient 22,API,PH_CARD_01,Houston,216,kg,60,,BioSource Ltd,2024-12-13 08:24:24
+INV-0089,API-023,Active ingredient 23,API,PH_INF_02,Wuxi,350,kg,240,,BIOSOURCE LTD,2024-12-14 00:28:11
+INV-0090,API-023,Active ingredient 23,API,PH_INF_02,Dublin,314,kg,90,,BioSource Ltd,2024-12-12 11:17:24
+INV-0091,API-023,Active ingredient 23,api,PH_INF_02,Singapore,764,kg,230,,BIOSOURCE LTD,14/12/2024 10:12
+INV-0092,API-023,Active ingredient 23,API,PH_INF_02,Houston,335,kg,150,24/02/2025,BioSource Ltd,2024-12-26 13:19:52
+INV-0093,API-024,Active ingredient 24,API,PH_IMM_02,Wuxi,183,kg,,2025-01-12,BioSource Ltd,2024-12-30 22:55:43
+INV-0094,API-024,Active ingredient 24,API,PH_IMM_02,Dublin,202,kg,120,,BioSource Ltd,2024-12-15 23:21:55
+INV-0095,API-024,Active ingredient 24,API,PH_IMM_02,Singapore,831,kg,280,2025-02-06,BIOSOURCE LTD,2024-12-30 05:35:38
+INV-0096,API-024,Active ingredient 24,API,PH_IMM_02,Houston,446,kg,170,,BioSource Ltd,2024-12-26 11:49:52
+INV-0097,API-025,Active ingredient 25,API,PH_CARD_01,Wuxi,29,kg,110,2025-01-07,Apex Ingredients,2024-12-16 18:04:46
+INV-0098,API-025,Active ingredient 25,api,PH_CARD_01,Dublin,230,kg,90,,Apex Ingredients,2024-12-17 17:24:08
+INV-0099,API-025,Active ingredient 25,API,PH_CARD_01,Singapore,365,kg,110,,Apex Ingredients,2024-12-24 04:43:30
+INV-0099,API-025,Active ingredient 25,API,PH_CARD_01,Singapore,319,kg,110,,Apex Ingredients,2024-12-16 04:43:30
+INV-0100,API-025,Active ingredient 25,API,PH_CARD_01,Houston,254,kg,120,,Apex Ingredients,2024-12-26 06:36:13
+INV-0101,API-026,Active ingredient 26,API,PH_RESP_01,Wuxi,620,kg,170,,BioSource Ltd,2024-12-22 13:01:00
+INV-0102,API-026,Active ingredient 26,API,PH_RESP_01,Dublin,628,kg,250,,BioSource Ltd,2024-12-19 09:18:23
+INV-0103,API-026,Active ingredient 26,API,PH_RESP_01,Singapore,156,kg,60,,BioSource Ltd,2024-12-21 23:41:11
+INV-0104,API-026,Active ingredient 26,API,PH_RESP_01,Houston ,215,kg,170,,BioSource Ltd,2024-12-13 05:09:26
+INV-0105,API-027,Active ingredient 27,API ,PH_CARD_02,Wuxi,220,kg,60,,BioSource Ltd,2024-12-17 03:04:47
+INV-0106,API-027,Active ingredient 27,API,PH_CARD_02,Dublin,537,kg,170,,BioSource Ltd,2024-12-17 23:07:32
+INV-0107,API-027,Active ingredient 27,API ,PH_CARD_02,Singapore,544,kg,220,,BioSource Ltd,14/12/2024 11:04
+INV-0108,API-027,Active ingredient 27,API,PH_CARD_02,Houston,202,kg,90,,BioSource Ltd,2024-12-29 03:28:01
+INV-0109,API-028,Active ingredient 28,API,PH_INF_01,Wuxi,337,kg,110,2024-12-28,Sigma Chemicals,2024-12-25 17:01:31
+INV-0110,API-028,Active ingredient 28,API,PH_INF_01,Dublin,627,kg,230,,Sigma Chemicals,2024-12-13 06:05:27
+INV-0111,API-028,Active ingredient 28,API,PH_INF_01,Singapore,203,kg,80,,Sigma Chemicals,2024-12-23 08:48:20
+INV-0112,API-028,Active ingredient 28,API,PH_INF_01,Houston,"1,019",kg,290,2025-01-09,Sigma Chemicals,2024-12-29 11:25:20
+INV-0113,API-029,Active ingredient 29,API,PH_ONC_01,Wuxi,438,kg,250,2024-11-22,BioSource Ltd,2024-12-19 00:25:11
+INV-0114,API-029,Active ingredient 29,API,PH_ONC_01,Dublin,316,kg,80,,BioSource Ltd,2024-12-17 19:14:46
+INV-0115,API-029,Active ingredient 29,API,PH_ONC_01,Singapore,467,kg,130,,BioSource Ltd,2024-12-22 20:20:28
+INV-0116,API-029,Active ingredient 29,API,PH_ONC_01,Houston,279,kg,230,,BioSource Ltd,2024-12-31 22:53:19
+INV-0117,API-030,Active ingredient 30,API,PH_IMM_01,Wuxi,293,kg,200,2025-02-09,Sigma Chemicals,2024-12-27 12:59:38
+INV-0118,API-030,Active ingredient 30,API,PH_IMM_01,Dublin,353,kg,130,,Sigma Chemicals,2024-12-20 10:05:48
+INV-0119,API-030,Active ingredient 30,API,PH_IMM_01,Singapore,352,kg,150,,Sigma Chemicals,2024-12-27 00:44:15
+INV-0120,API-030,Active ingredient 30,API,PH_IMM_01,Houston,374,kg,200,,Sigma Chemicals,2024-12-31 14:15:25
+INV-0121,API-031,Active ingredient 31,API,PH_GI_01,Wuxi,205,kg,70,,BioSource Ltd,2024-12-26 21:45:08
+INV-0122,API-031,Active ingredient 31,API,PH_GI_01,Dublin,367,kg,210,,BioSource Ltd,25/12/2024 00:46
+INV-0123,API-031,Active ingredient 31,API,PH_GI_01,Singapore,677,kg,220,,BioSource Ltd,2024-12-13 15:41:29
+INV-0124,API-031,Active ingredient 31,API,PH_GI_01,Houston,298,kg,160,,BioSource Ltd,2024-12-25 05:28:28
+INV-0125,API-032,Active ingredient 32,API,PH_NEU_02,Wuxi,500,kg,150,2025-02-03,BioSource Ltd,2024-12-15 21:15:42
+INV-0125,API-032,Active ingredient 32,API,PH_NEU_02,Wuxi,619,kg,150,2025-02-03,BioSource Ltd,2024-11-26 21:15:42
+INV-0126,API-032,Active ingredient 32,API,PH_NEU_02,Dublin,841,kg,280,2025-02-18,BioSource Ltd,2024-12-21 16:51:50
+INV-0127,API-032,Active ingredient 32,API,PH_NEU_02,Singapore,320,kg,130,2025-01-25,BioSource Ltd,14/12/2024 23:06
+INV-0128,API-032,Active ingredient 32,API,PH_NEU_02,Houston,63,kg,190,2025-01-25,BioSource Ltd,2024-12-18 17:55:24
+INV-0129,API-033,Active ingredient 33,API,PH_INF_01,Wuxi,424,kg,230,,BioSource Ltd,2024-12-30 10:53:08
+INV-0130,API-033,Active ingredient 33,API,PH_INF_01,Dublin,653,kg,190,,BioSource Ltd,2024-12-31 06:26:18
+INV-0131,API-033,Active ingredient 33,API,PH_INF_01,Singapore,1008,kg,260,10-Jan-2025,BioSource Ltd,2024-12-12 01:32:00
+INV-0131,API-033,Active ingredient 33,API,PH_INF_01,Singapore,1008,kg,260,10-Jan-2025,BioSource Ltd,2024-12-12 01:32:00
+INV-0132,API-033,Active ingredient 33,API,PH_INF_01,Houston,,kg,220,,BIOSOURCE LTD,2024-12-22 04:39:26
+INV-0133,API-034,Active ingredient 34,API,PH_NEU_02,Wuxi,734,kg,200,2025-01-23,Sigma Chemicals,2024-12-19 15:45:34
+INV-0134,API-034,Active ingredient 34,api,PH_NEU_02,Dublin,209,kg,130,2025-02-13,Sigma Chemicals,2024-12-27 15:54:24
+INV-0135,API-034,Active ingredient 34,API,PH_NEU_02,Singapore,40,kg,130,2025-01-12,Sigma Chemicals,2024-12-30 03:29:27
+INV-0136,API-034,Active ingredient 34,API,PH_NEU_02,Houston,173,kg,80,,Sigma Chemicals,2024-12-17 06:13:37
+INV-0137,API-035,Active ingredient 35,API,PH_CARD_01,Wuxi ,218,kg,60,2025-01-31,Sigma Chemicals,2024-12-18 15:47:04
+INV-0138,API-035,Active ingredient 35,API,PH_CARD_01,Dublin,97,kg,60,11/01/2025,Sigma Chemicals,2024-12-21 18:05:09
+INV-0139,API-035,Active ingredient 35,API,PH_CARD_01,Singapore,418,kg,290,2025-02-27,Sigma Chemicals,2024-12-21 02:37:54
+INV-0140,API-035,Active ingredient 35,API,PH_CARD_01,Houston,283,kg,140,,Sigma Chemicals,2024-12-25 01:32:50
+INV-0141,API-036,Active ingredient 36,API,PH_NEU_01,Wuxi,357,kg,200,,BioSource Ltd,2024-12-19 03:44:21
+INV-0142,API-036,Active ingredient 36,API,PH_NEU_01,dublin,201,kg,60,,BioSource Ltd,2024-12-22 08:30:22
+INV-0143,API-036,Active ingredient 36,API,PH_NEU_01,Singapore,353,kg,100,2025-01-18,BioSource Ltd,2024-12-13 16:15:35
+INV-0144,API-036,Active ingredient 36,API,PH_NEU_01,Houston,667,kg,280,,BioSource Ltd,2024-12-15 06:04:36
+INV-0145,API-037,Active ingredient 37,API,PH_CARD_02,Wuxi,286,kg,180,2025-02-27,Apex Ingredients,2024-12-25 15:25:06
+INV-0146,API-037,Active ingredient 37,API,PH_CARD_02,Dublin,682,kg,210,,Apex Ingredients,2024-12-22 22:33:19
+INV-0147,API-037,Active ingredient 37,API,PH_CARD_02,Singapore,524,kg,160,2025-02-01,Apex Ingredients,2024-12-25 06:35:27
+INV-0148,API-037,Active ingredient 37,API,PH_CARD_02,Houston,286,kg,230,,Apex Ingredients,2024-12-13 05:33:42
+INV-0149,API-038,Active ingredient 38,API,PH_CARD_01,Wuxi,438,kg,190,25/02/2025,Apex Ingredients,2024-12-12 22:48:33
+INV-0150,API-038,Active ingredient 38,API,PH_CARD_01,Dublin ,63,kg,140,2025-01-16,Apex Ingredients,2024-12-18 17:03:57
+INV-0151,API-038,Active ingredient 38,API,PH_CARD_01,Singapore,72,kg,60,,Apex Ingredients,2024-12-12 02:04:28
+INV-0152,API-038,Active ingredient 38,API,PH_CARD_01,Houston,304,kg,220,,Apex Ingredients,2024-12-28 07:03:40
+INV-0153,API-039,Active ingredient 39,API,PH_ONC_01,Wuxi,387,kg,,2025-02-23,Sigma Chemicals,2024-12-15 20:30:08
+INV-0154,API-039,Active ingredient 39,API,PH_ONC_01,Dublin,338,kg,190,2025-02-11,Sigma Chemicals,2024-12-21 23:46:24
+INV-0155,API-039,Active ingredient 39,API,PH_ONC_01,Singapore,627,kg,260,,Sigma Chemicals,2024-12-30 20:51:11
+INV-0156,API-039,Active ingredient 39,API,PH_ONC_01,Houston,465,kg,120,2025-01-11,Sigma Chemicals,2024-12-18 03:54:22
+INV-0157,API-040,Active ingredient 40,API,PH_ONC_02,Wuxi,683,kg,290,,BioSource Ltd,2024-12-22 15:40:12
+INV-0158,API-040,Active ingredient 40,API,PH_ONC_02,Dublin,562,kg,180,,BioSource Ltd,2024-12-26 21:11:02
+INV-0159,API-040,Active ingredient 40,API,PH_ONC_02,Singapore,477,kg,170,,BioSource Ltd,2024-12-25 11:11:24
+INV-0160,API-040,Active ingredient 40,API,PH_ONC_02,Houston,649,kg,170,,BioSource Ltd,2024-12-19 06:45:17
+INV-0161,EXC-001,Lactose monohydrate grade A,Excipient,PH_CARD_02,Wuxi,1142,kg,640,,Nordic Excipients,2024-12-29 19:25:34
+INV-0162,EXC-001,Lactose monohydrate grade A,Excipient,PH_CARD_02,Dublin,917,kg,1040,2025-01-04,Nordic Excipients,2024-12-27 17:29:27
+INV-0163,EXC-001,Lactose monohydrate grade A,Excipient,PH_CARD_02,Singapore,918,kg,650,2025-02-12,Nordic Excipients,2024-12-16 23:42:40
+INV-0164,EXC-001,Lactose monohydrate grade A,Excipient,PH_CARD_02,Houston,2269,kg,660,2025-02-09,Nordic Excipients,2024-12-28 09:28:50
+INV-0165,EXC-002,Microcrystalline cellulose grade A,Excipient,PH_CARD_01,Wuxi,495,kg,240,,Nordic Excipients,29/12/2024 23:19
+INV-0166,EXC-002,Microcrystalline cellulose grade A,Excipient,PH_CARD_01,Dublin,3417,kg,990,,Nordic Excipients,2024-12-25 11:14:54
+INV-0167,EXC-002,Microcrystalline cellulose grade A,excipient,PH_CARD_01,SINGAPORE,1302,kg,430,,Nordic Excipients,2024-12-19 05:03:31
+INV-0168,EXC-002,Microcrystalline cellulose grade A,Excipient,PH_CARD_01,Houston,681,kg,240,2025-02-02,Nordic Excipients,2024-12-16 16:11:29
+INV-0169,EXC-003,Magnesium stearate grade A,Excipient,PH_ONC_02,Wuxi,2478,kg,,2025-01-17,Nordic Excipients,2024-12-30 15:29:14
+INV-0170,EXC-003,Magnesium stearate grade A,Excipient,PH_ONC_02,Dublin,3790,kg,970,,Nordic Excipients,25/12/2024 02:04
+INV-0171,EXC-003,Magnesium stearate grade A,Excipient,PH_ONC_02,Singapore,433,kg,200,2025-01-15,Nordic Excipients,2024-12-30 08:59:27
+INV-0172,EXC-003,Magnesium stearate grade A,excipient,PH_ONC_02,Houston,981,kg,400,,Nordic Excipients,2024-12-23 22:35:58
+INV-0173,EXC-004,Povidone grade A,Excipient,PH_IMM_01,Wuxi,4453,kg,1230,,Apex Ingredients,2024-12-24 13:12:01
+INV-0174,EXC-004,Povidone grade A,Excipient,PH_IMM_01,Dublin,692,kg,490,,Apex Ingredients,2024-12-27 04:32:06
+INV-0175,EXC-004,Povidone grade A,Excipient,PH_IMM_01,Singapore,3028,kg,1300,,Apex Ingredients,2024-12-22 04:15:00
+INV-0176,EXC-004,Povidone grade A,Excipient,PH_IMM_01,Houston,945,kg,1470,2025-01-29,Apex Ingredients,2024-12-20 00:11:34
+INV-0177,EXC-005,Croscarmellose sodium grade A,Excipient,PH_RESP_01,Wuxi,2861,kg,1370,,Nordic Excipients,2024-12-23 09:24:00
+INV-0178,EXC-005,Croscarmellose sodium grade A,Excipient,PH_RESP_01,Dublin,391,kg,300,,Nordic Excipients,2024-12-19 06:22:42
+INV-0179,EXC-005,Croscarmellose sodium grade A,Excipient,PH_RESP_01,Singapore,2872,kg,870,,Nordic Excipients,2024-12-20 05:05:24
+INV-0180,EXC-005,Croscarmellose sodium grade A,Excipient,PH_RESP_01,Houston,2058,kg,720,2025-01-31,Nordic Excipients,2024-12-16 05:05:02
+INV-0181,EXC-006,Talc grade A,Excipient,PH_ONC_01,Wuxi,431,kg,210,,Evergreen Materials,2024-12-27 21:59:05
+INV-0182,EXC-006,Talc grade A,Excipient,PH_ONC_01,Dublin,3495,kg,1440,,EVERGREEN MATERIALS,2024-12-20 08:36:40
+INV-0183,EXC-006,Talc grade A,Excipient,PH_ONC_01,Singapore,"3,224",kg,960,,Evergreen Materials,2024-12-20 04:30:47
+INV-0184,EXC-006,Talc grade A,Excipient,PH_ONC_01,Houston,3757,kg,970,,Evergreen Materials,2024-12-26 08:15:11
+INV-0185,EXC-007,Colloidal silicon dioxide grade A,Excipient,PH_CARD_02,Wuxi,582,kg,630,2025-01-19,Nordic Excipients,2024-12-26 01:01:54
+INV-0186,EXC-007,Colloidal silicon dioxide grade A,Excipient,PH_CARD_02,Dublin,2843,kg,770,,Nordic Excipients,2024-12-22 21:14:45
+INV-0187,EXC-007,Colloidal silicon dioxide grade A,Excipient,PH_CARD_02,Singapore,1204,kg,820,2025-02-01,Nordic Excipients,2024-12-15 11:12:44
+INV-0188,EXC-007,Colloidal silicon dioxide grade A,Excipient,PH_CARD_02,HOUSTON,5688,kg,1450,,Nordic Excipients,30/12/2024 19:30
+INV-0189,EXC-008,Hypromellose grade A,Excipient,PH_CARD_02,WUXI,2573,kg,690,,Apex Ingredients,2024-12-12 01:48:09
+INV-0190,EXC-008,Hypromellose grade A,Excipient ,PH_CARD_02,Dublin,1324,kg,810,,Apex Ingredients,2024-12-18 11:38:42
+INV-0191,EXC-008,Hypromellose grade A,Excipient,PH_CARD_02,Singapore,1869,kg,1150,,Apex Ingredients,2024-12-19 15:11:00
+INV-0192,EXC-008,Hypromellose grade A,Excipient,PH_CARD_02,Houston,904,kg,690,,Apex Ingredients,2024-12-30 09:45:34
+INV-0192,EXC-008,Hypromellose grade A,Excipient,PH_CARD_02,Houston,904,kg,690,,Apex Ingredients,2024-12-30 09:45:34
+INV-0193,EXC-009,Mannitol grade A,Excipient,PH_ONC_01,Wuxi,1796,kg,840,,Evergreen Materials,2024-12-23 11:55:38
+INV-0194,EXC-009,Mannitol grade A,Excipient,PH_ONC_01,Dublin,4083,kg,1300,2025-01-22,Evergreen Materials,2024-12-15 16:15:16
+INV-0195,EXC-009,Mannitol grade A,Excipient,PH_ONC_01,Singapore,2345,kg,1070,,Evergreen Materials,2024-12-19 19:33:02
+INV-0196,EXC-009,Mannitol grade A,Excipient,PH_ONC_01,Houston,3285,kg,930,,Evergreen Materials,14/12/2024 11:06
+INV-0197,EXC-010,Pregelatinised starch grade A,Excipient,PH_INF_02,WUXI,742,kg,540,,Apex Ingredients,2024-12-17 18:08:07
+INV-0198,EXC-010,Pregelatinised starch grade A,Excipient,PH_INF_02,Dublin,2283,kg,1340,,Apex Ingredients,2024-12-13 19:09:48
+INV-0199,EXC-010,Pregelatinised starch grade A,Excipient,PH_INF_02,Singapore,4259,kg,1420,,Apex Ingredients,2024-12-15 11:40:45
+INV-0200,EXC-010,Pregelatinised starch grade A,Excipient,PH_INF_02,Houston,1171,kg,350,,Apex Ingredients,2024-12-28 11:06:28
+INV-0201,EXC-011,Lactose monohydrate grade B,Excipient,PH_IMM_01,Wuxi,563,kg,420,,Evergreen Materials,2024-12-25 18:33:13
+INV-0202,EXC-011,Lactose monohydrate grade B,Excipient,PH_IMM_01,Dublin,1413,kg,1130,,EVERGREEN MATERIALS,2024-12-27 12:06:49
+INV-0203,EXC-011,Lactose monohydrate grade B,Excipient,PH_IMM_01,Singapore,2500,kg,670,2025-01-06,Evergreen Materials,2024-12-13 13:53:43
+INV-0204,EXC-011,Lactose monohydrate grade B,Excipient,PH_IMM_01,Houston,610,kg,890,2025-01-11,Evergreen Materials,2024-12-18 10:58:14
+INV-0205,EXC-012,Microcrystalline cellulose grade B,Excipient,PH_ONC_02,Wuxi,-50,kg,900,,Evergreen Materials,2024-12-26 16:26:02
+INV-0206,EXC-012,Microcrystalline cellulose grade B,Excipient,PH_ONC_02,Dublin,2750,kg,1300,2025-02-07,Evergreen Materials,2024-12-18 18:23:15
+INV-0207,EXC-012,Microcrystalline cellulose grade B,Excipient ,PH_ONC_02,Singapore,1262,kg,1030,,Evergreen Materials,2024-12-13 02:02:03
+INV-0208,EXC-012,Microcrystalline cellulose grade B,Excipient,PH_ONC_02,Houston,1749,kg,650,,Evergreen Materials,2024-12-23 07:55:24
+INV-0209,EXC-013,Magnesium stearate grade B,Excipient,PH_CARD_02,wuxi,4515,kg,1330,,Evergreen Materials,2024-12-22 23:20:56
+INV-0210,EXC-013,Magnesium stearate grade B,Excipient,PH_CARD_02,Dublin,2852,kg,1240,,Evergreen Materials,2024-12-23 00:44:46
+INV-0211,EXC-013,Magnesium stearate grade B,Excipient,PH_CARD_02,Singapore,1941,kg,620,2025-01-25,Evergreen Materials,2024-12-25 05:08:43
+INV-0212,EXC-013,Magnesium stearate grade B,Excipient,PH_CARD_02,HOUSTON,"1,530",kg,930,,EVERGREEN MATERIALS,2024-12-24 19:02:11
+INV-0212,EXC-013,Magnesium stearate grade B,Excipient,PH_CARD_02,HOUSTON,"1,530",kg,930,,EVERGREEN MATERIALS,2024-12-24 19:02:11
+INV-0213,EXC-014,Povidone grade B,Excipient,PH_RESP_01,Wuxi,-2946,kg,1070,,Evergreen Materials,2024-12-25 13:27:40
+INV-0214,EXC-014,Povidone grade B,Excipient,PH_RESP_01,Dublin,"2,476",kg,950,2025-01-30,Evergreen Materials,2024-12-16 11:43:16
+INV-0215,EXC-014,Povidone grade B,Excipient,PH_RESP_01,Singapore,1729,kg,560,,EVERGREEN MATERIALS,2024-12-25 10:55:46
+INV-0216,EXC-014,Povidone grade B,Excipient,PH_RESP_01,Houston,2822,kg,1340,2025-02-22,Evergreen Materials,2024-12-17 16:00:31
+INV-0217,EXC-015,Croscarmellose sodium grade B,Excipient,PH_IMM_02,Wuxi,4856,kg,0,,Nordic Excipients,2024-12-31 17:22:05
+INV-0218,EXC-015,Croscarmellose sodium grade B,Excipient,PH_IMM_02,Dublin,2176,kg,1190,25/01/2025,Nordic Excipients,2024-12-25 02:11:36
+INV-0219,EXC-015,Croscarmellose sodium grade B,Excipient,PH_IMM_02,Singapore,368,kg,1170,2025-01-14,Nordic Excipients,31/12/2024 11:54
+INV-0220,EXC-015,Croscarmellose sodium grade B,Excipient,PH_IMM_02,Houston,3425,kg,1210,2025-01-17,Nordic Excipients,2024-12-25 23:34:16
+INV-0221,EXC-016,Talc grade B,Excipient,PH_RESP_01,Wuxi,3331,kg,1010,10-Jan-2025,Apex Ingredients,2024-12-29 19:19:47
+INV-0222,EXC-016,Talc grade B,Excipient,PH_RESP_01,Dublin,1543,kg,770,,Apex Ingredients,2024-12-15 16:26:01
+INV-0223,EXC-016,Talc grade B,Excipient,PH_RESP_01,Singapore,856,kg,330,,Apex Ingredients,2024-12-18 18:01:09
+INV-0224,EXC-016,Talc grade B,Excipient,PH_RESP_01,Houston,702,kg,430,,APEX INGREDIENTS,2024-12-13 22:31:11
+INV-0225,EXC-017,Colloidal silicon dioxide grade B,Excipient,PH_CARD_02,Wuxi,1249,kg,730,,Nordic Excipients,2024-12-13 03:51:45
+INV-0226,EXC-017,Colloidal silicon dioxide grade B,Excipient,PH_CARD_02,Dublin,1601,kg,1080,2025-02-26,Nordic Excipients,2024-12-27 02:25:49
+INV-0227,EXC-017,Colloidal silicon dioxide grade B,Excipient,PH_CARD_02,Singapore,924,kg,440,,Nordic Excipients,2024-12-25 16:40:16
+INV-0228,EXC-017,Colloidal silicon dioxide grade B,Excipient,PH_CARD_02,Houston,1530,kg,1120,2025-01-29,Nordic Excipients,2024-12-17 03:45:14
+INV-0229,EXC-018,Hypromellose grade B,Excipient,PH_GI_01,Wuxi,5144,kg,1490,,Nordic Excipients,2024-12-28 14:08:01
+INV-0230,EXC-018,Hypromellose grade B,Excipient,PH_GI_01,Dublin,4771,kg,1260,,Nordic Excipients,2024-12-21 04:41:30
+INV-0231,EXC-018,Hypromellose grade B,Excipient,PH_GI_01,Singapore,3894,kg,1430,2025-02-10,Nordic Excipients,2024-12-28 13:16:19
+INV-0232,EXC-018,Hypromellose grade B,Excipient,PH_GI_01,Houston,"1,106",kg,580,2025-01-30,Nordic Excipients,2024-12-14 11:15:42
+INV-0233,EXC-019,Mannitol grade B,Excipient,PH_NEU_01,Wuxi,558,kg,1260,2025-01-23,Apex Ingredients,2024-12-29 14:35:24
+INV-0234,EXC-019,Mannitol grade B,Excipient,PH_NEU_01,Dublin,1748,kg,880,,Apex Ingredients,2024-12-28 07:54:56
+INV-0235,EXC-019,Mannitol grade B,Excipient,PH_NEU_01,Singapore,1172,kg,810,,Apex Ingredients,2024-12-14 00:05:37
+INV-0236,EXC-019,Mannitol grade B,Excipient,PH_NEU_01,Houston,1141,kg,370,,Apex Ingredients,2024-12-22 22:14:11
+INV-0237,EXC-020,Pregelatinised starch grade B,Excipient,PH_INF_01,Wuxi,514,kg,920,2025-01-23,Evergreen Materials,2024-12-29 11:17:52
+INV-0238,EXC-020,Pregelatinised starch grade B,Excipient,PH_INF_01,Dublin,855,kg,710,2025-02-08,Evergreen Materials,2024-12-12 13:06:05
+INV-0239,EXC-020,Pregelatinised starch grade B,Excipient,PH_INF_01,Singapore,1770,kg,490,2025-02-27,Evergreen Materials,2024-12-13 15:33:52
+INV-0240,EXC-020,Pregelatinised starch grade B,Excipient,PH_INF_01,Houston,1614,kg,850,2025-01-28,Evergreen Materials,2024-12-13 22:12:05
+INV-0240,EXC-020,Pregelatinised starch grade B,Excipient,PH_INF_01,Houston,1614,kg,850,2025-01-28,Evergreen Materials,2024-12-13 22:12:05
+INV-0241,EXC-021,Lactose monohydrate grade C,Excipient,PH_NEU_02,Wuxi,1319,kg,440,,Evergreen Materials,2024-12-28 09:15:41
+INV-0242,EXC-021,Lactose monohydrate grade C,Excipient,PH_NEU_02,Dublin,655,kg,500,2025-01-25,Evergreen Materials,2024-12-16 19:56:53
+INV-0243,EXC-021,Lactose monohydrate grade C,Excipient,PH_NEU_02,Singapore,3428,kg,1290,2025-01-21,Evergreen Materials,2024-12-14 23:44:21
+INV-0244,EXC-021,Lactose monohydrate grade C,Excipient,PH_NEU_02,Houston,4057,kg,1190,2025-01-30,Evergreen Materials,2024-12-23 02:00:58
+INV-0245,EXC-022,Microcrystalline cellulose grade C,Excipient,PH_NEU_01,Wuxi,2980,kg,830,13/01/2025,Apex Ingredients,2024-12-26 12:37:33
+INV-0246,EXC-022,Microcrystalline cellulose grade C,Excipient,PH_NEU_01,Dublin,1451,kg,470,,Apex Ingredients,2024-12-30 17:15:14
+INV-0247,EXC-022,Microcrystalline cellulose grade C,Excipient,PH_NEU_01,Singapore,2480,kg,1240,,Apex Ingredients,2024-12-15 12:25:59
+INV-0248,EXC-022,Microcrystalline cellulose grade C,Excipient,PH_NEU_01,Houston,1966,kg,500,,Apex Ingredients,2024-12-29 06:01:35
+INV-0249,EXC-023,Magnesium stearate grade C,Excipient,PH_ONC_02,Wuxi,564,kg,370,2025-02-19,Nordic Excipients,2024-12-26 21:21:23
+INV-0250,EXC-023,Magnesium stearate grade C,Excipient,PH_ONC_02,Dublin,1555,kg,470,,Nordic Excipients,2024-12-14 21:41:11
+INV-0251,EXC-023,Magnesium stearate grade C,Excipient,PH_ONC_02,Singapore,622,kg,240,2025-01-26,Nordic Excipients,2024-12-14 20:41:09
+INV-0252,EXC-023,Magnesium stearate grade C,Excipient,PH_ONC_02,Houston,1153,kg,810,2025-02-21,Nordic Excipients,2024-12-12 21:41:11
+INV-0253,EXC-024,Povidone grade C,Excipient,PH_ONC_02,Wuxi,876,kg,950,2025-01-27,Nordic Excipients,2024-12-16 22:20:35
+INV-0254,EXC-024,Povidone grade C,excipient,PH_ONC_02,Dublin,2043,kg,680,,Nordic Excipients,2024-12-18 01:24:07
+INV-0255,EXC-024,Povidone grade C,Excipient,PH_ONC_02,Singapore,1390,kg,1030,2025-01-20,Nordic Excipients,2024-12-16 06:55:51
+INV-0256,EXC-024,Povidone grade C,Excipient,PH_ONC_02,Houston,3325,kg,1160,2025-02-02,Nordic Excipients,2024-12-15 04:59:08
+INV-0257,EXC-025,Croscarmellose sodium grade C,Excipient,PH_CARD_02,Wuxi,879,kg,430,,Evergreen Materials,2024-12-27 03:59:26
+INV-0258,EXC-025,Croscarmellose sodium grade C,Excipient,PH_CARD_02,Dublin,"1,144",kg,670,,EVERGREEN MATERIALS,2024-12-17 23:39:29
+INV-0259,EXC-025,Croscarmellose sodium grade C,Excipient,PH_CARD_02,Singapore,3585,kg,990,,Evergreen Materials,2024-12-27 19:25:21
+INV-0260,EXC-025,Croscarmellose sodium grade C,Excipient,PH_CARD_02,Houston,2004,kg,730,,Evergreen Materials,2024-12-24 13:37:42
+INV-0261,EXC-026,Talc grade C,Excipient,PH_RESP_01,Wuxi ,,kg,280,,Evergreen Materials,2024-12-26 05:40:58
+INV-0262,EXC-026,Talc grade C,Excipient,PH_RESP_01,Dublin,2216,kg,700,,Evergreen Materials,2024-12-25 12:52:41
+INV-0263,EXC-026,Talc grade C,Excipient,PH_RESP_01,SINGAPORE,1171,kg,400,2025-01-26,Evergreen Materials,2024-12-27 20:25:53
+INV-0264,EXC-026,Talc grade C,Excipient,PH_RESP_01,Houston,1614,kg,620,2025-02-15,Evergreen Materials,2024-12-25 00:40:50
+INV-0265,EXC-027,Colloidal silicon dioxide grade C,Excipient,PH_INF_01,Wuxi,454,kg,220,2025-02-26,Nordic Excipients,2024-12-29 09:55:58
+INV-0266,EXC-027,Colloidal silicon dioxide grade C,Excipient,PH_INF_01,Dublin,1166,kg,430,,Nordic Excipients,2024-12-28 05:15:04
+INV-0267,EXC-027,Colloidal silicon dioxide grade C,Excipient,PH_INF_01,Singapore ,2866,kg,1030,2025-01-26,Nordic Excipients,2024-12-15 12:18:00
+INV-0268,EXC-027,Colloidal silicon dioxide grade C,Excipient,PH_INF_01,Houston,1419,kg,520,,Nordic Excipients,2024-12-20 00:30:15
+INV-0269,EXC-028,Hypromellose grade C,Excipient,PH_NEU_01,Wuxi,1994,kg,650,,Apex Ingredients,2024-12-21 23:28:44
+INV-0270,EXC-028,Hypromellose grade C,Excipient,PH_NEU_01,Dublin,934,kg,1330,2025-01-15,Apex Ingredients,2024-12-24 15:11:21
+INV-0271,EXC-028,Hypromellose grade C,Excipient,PH_NEU_01,Singapore,"2,296",kg,590,2025-01-19,Apex Ingredients,2024-12-20 00:29:29
+INV-0272,EXC-028,Hypromellose grade C,Excipient,PH_NEU_01,Houston,2264,kg,1300,,Apex Ingredients,2024-12-17 20:22:09
+INV-0273,EXC-029,Mannitol grade C,Excipient ,PH_INF_02,Wuxi,1573,kg,490,,Apex Ingredients,2024-12-16 17:06:45
+INV-0274,EXC-029,Mannitol grade C,Excipient,PH_INF_02,Dublin ,3898,kg,1470,,Apex Ingredients,2024-12-23 14:13:04
+INV-0275,EXC-029,Mannitol grade C,Excipient,PH_INF_02,Singapore,796,kg,590,,Apex Ingredients,2024-12-21 19:44:44
+INV-0276,EXC-029,Mannitol grade C,Excipient,PH_INF_02,Houston,1163,kg,370,2025-02-11,Apex Ingredients,2024-12-29 01:58:12
+INV-0277,EXC-030,Pregelatinised starch grade C,Excipient,PH_CARD_01,Wuxi,3010,kg,1170,,Nordic Excipients,2024-12-29 14:47:57
+INV-0278,EXC-030,Pregelatinised starch grade C,Excipient,PH_CARD_01,Dublin,2445,kg,800,,Nordic Excipients,2024-12-22 19:29:05
+INV-0279,EXC-030,Pregelatinised starch grade C,Excipient,PH_CARD_01,Singapore,440,kg,1030,,Nordic Excipients,2024-12-26 00:42:56
+INV-0280,EXC-030,Pregelatinised starch grade C,Excipient,PH_CARD_01,Houston,2085,kg,730,,Nordic Excipients,2024-12-28 03:29:01
+INV-0281,EXC-031,Lactose monohydrate grade D,Excipient,PH_CARD_01,Wuxi,2773,kg,770,,Nordic Excipients,2024-12-14 23:15:09
+INV-0282,EXC-031,Lactose monohydrate grade D,Excipient,PH_CARD_01,Dublin,0,kg,200,2025-01-09,Nordic Excipients,2024-12-14 00:57:59
+INV-0283,EXC-031,Lactose monohydrate grade D,Excipient,PH_CARD_01,singapore,1421,kg,880,2025-02-27,Nordic Excipients,2024-12-13 14:13:40
+INV-0284,EXC-031,Lactose monohydrate grade D,Excipient,PH_CARD_01,Houston,2281,kg,1190,,Nordic Excipients,2024-12-18 00:07:06
+INV-0285,EXC-032,Microcrystalline cellulose grade D,Excipient,PH_RESP_01,Wuxi,1805,kg,630,2025-01-30,Nordic Excipients,2024-12-17 10:25:40
+INV-0286,EXC-032,Microcrystalline cellulose grade D,Excipient,PH_RESP_01,Dublin,430,kg,1110,2024-11-25,Nordic Excipients,2024-12-14 15:06:07
+INV-0287,EXC-032,Microcrystalline cellulose grade D,Excipient,PH_RESP_01,Singapore,1973,kg,660,,Nordic Excipients,2024-12-29 15:23:18
+INV-0288,EXC-032,Microcrystalline cellulose grade D,Excipient,PH_RESP_01,Houston,1537,kg,880,,Nordic Excipients,2024-12-22 10:44:28
+INV-0289,EXC-033,Magnesium stearate grade D,Excipient,PH_ONC_02,Wuxi,2871,kg,910,,Nordic Excipients,2024-12-20 01:12:29
+INV-0290,EXC-033,Magnesium stearate grade D,Excipient,PH_ONC_02,Dublin,2668,kg,1030,,Nordic Excipients,2024-12-26 09:38:57
+INV-0291,EXC-033,Magnesium stearate grade D,Excipient,PH_ONC_02,Singapore,"1,579",kg,780,,Nordic Excipients,2024-12-30 20:57:02
+INV-0292,EXC-033,Magnesium stearate grade D,Excipient,PH_ONC_02,Houston,1490,kg,390,,Nordic Excipients,2024-12-28 20:56:53
+INV-0292,EXC-033,Magnesium stearate grade D,Excipient,PH_ONC_02,Houston,1490,kg,390,,Nordic Excipients,2024-12-28 20:56:53
+INV-0293,EXC-034,Povidone grade D,Excipient,PH_INF_02,Wuxi,739,kg,600,2025-01-26,Evergreen Materials,2024-12-29 20:50:55
+INV-0294,EXC-034,Povidone grade D,Excipient,PH_INF_02,Dublin,959,kg,520,2025-01-19,EVERGREEN MATERIALS,2024-12-19 05:53:23
+INV-0295,EXC-034,Povidone grade D,Excipient,PH_INF_02,Singapore,442,kg,290,14/02/2025,Evergreen Materials,2024-12-19 11:11:48
+INV-0296,EXC-034,Povidone grade D,Excipient,PH_INF_02,Houston,847,kg,350,2025-02-15,Evergreen Materials,2024-12-26 22:06:41
+INV-0297,EXC-035,Croscarmellose sodium grade D,Excipient,PH_GI_01,Wuxi,3717,kg,1250,2025-02-13,Evergreen Materials,2024-12-24 18:12:47
+INV-0298,EXC-035,Croscarmellose sodium grade D,Excipient,PH_GI_01,Dublin,875,kg,630,,Evergreen Materials,2024-12-26 08:09:19
+INV-0299,EXC-035,Croscarmellose sodium grade D,Excipient,PH_GI_01,Singapore,301,kg,390,2025-01-02,Evergreen Materials,2024-12-24 04:27:40
+INV-0300,EXC-035,Croscarmellose sodium grade D,Excipient,PH_GI_01,Houston,1466,kg,720,,Evergreen Materials,2024-12-30 02:50:37
+INV-0301,EXC-036,Talc grade D,Excipient,PH_ONC_02,Wuxi,1014,kg,310,2025-02-13,Evergreen Materials,2024-12-15 10:44:36
+INV-0302,EXC-036,Talc grade D,Excipient,PH_ONC_02,Dublin,1978,kg,1130,,Evergreen Materials,2024-12-29 10:48:21
+INV-0303,EXC-036,Talc grade D,Excipient,PH_ONC_02,Singapore,2609,kg,1090,,Evergreen Materials,2024-12-14 15:53:19
+INV-0304,EXC-036,Talc grade D,Excipient,PH_ONC_02,Houston,4162,kg,1120,2025-01-26,EVERGREEN MATERIALS,2024-12-25 10:30:43
+INV-0305,EXC-037,Colloidal silicon dioxide grade D,Excipient,PH_CARD_02,Wuxi,4442,kg,1340,,Evergreen Materials,2024-12-31 16:33:35
+INV-0306,EXC-037,Colloidal silicon dioxide grade D,Excipient,PH_CARD_02,Dublin,825,kg,420,2025-02-01,Evergreen Materials,2024-12-14 21:22:35
+INV-0307,EXC-037,Colloidal silicon dioxide grade D,Excipient,,Singapore,1663,kg,710,,Evergreen Materials,2024-12-13 13:12:11
+INV-0308,EXC-037,Colloidal silicon dioxide grade D,Excipient,PH_CARD_02,Houston,185,kg,670,2025-01-23,Evergreen Materials,2024-12-15 07:05:24
+INV-0309,EXC-038,Hypromellose grade D,Excipient,PH_CARD_01,Wuxi,5193,kg,1300,,Apex Ingredients,2024-12-21 08:03:04
+INV-0310,EXC-038,Hypromellose grade D,Excipient ,PH_CARD_01,Dublin,4219,kg,1400,2025-01-08,APEX INGREDIENTS,2024-12-30 02:12:49
+INV-0311,EXC-038,Hypromellose grade D,Excipient,PH_CARD_01,Singapore,2953,kg,1110,,Apex Ingredients,2024-12-31 23:43:32
+INV-0312,EXC-038,Hypromellose grade D,Excipient,PH_CARD_01,Houston,1670,kg,610,,Apex Ingredients,2024-12-29 01:04:37
+INV-0313,EXC-039,Mannitol grade D,Excipient,PH_ONC_02,Wuxi,2840,kg,1070,,Apex Ingredients,2024-12-20 18:45:53
+INV-0314,EXC-039,Mannitol grade D,Excipient,PH_ONC_02,Dublin,1788,kg,730,,Apex Ingredients,2024-12-12 01:33:27
+INV-0315,EXC-039,Mannitol grade D,Excipient,PH_ONC_02,Singapore,3837,kg,1360,,Apex Ingredients,2024-12-31 10:41:15
+INV-0316,EXC-039,Mannitol grade D,Excipient,PH_ONC_02,Houston,870,kg,0,,Apex Ingredients,2024-12-18 16:28:38
+INV-0317,EXC-040,Pregelatinised starch grade D,Excipient,PH_ONC_02,Wuxi,1642,kg,1320,,Nordic Excipients,2024-12-27 08:41:14
+INV-0318,EXC-040,Pregelatinised starch grade D,Excipient,PH_ONC_02,Dublin,921,kg,660,,NORDIC EXCIPIENTS,2024-12-30 05:37:59
+INV-0319,EXC-040,Pregelatinised starch grade D,Excipient,PH_ONC_02,Singapore,395,kg,310,,Nordic Excipients,2024-12-20 18:43:49
+INV-0320,EXC-040,Pregelatinised starch grade D,Excipient,PH_ONC_02,HOUSTON,655,kg,260,2025-02-17,Nordic Excipients,2024-12-28 16:07:15
+INV-0321,EXC-041,Lactose monohydrate grade E,Excipient,PH_INF_01,Wuxi,837,kg,270,,Nordic Excipients,2024-12-24 23:18:17
+INV-0322,EXC-041,Lactose monohydrate grade E,Excipient,PH_INF_01,Dublin,693,kg,210,,Nordic Excipients,2024-12-19 17:59:23
+INV-0323,EXC-041,Lactose monohydrate grade E,Excipient,PH_INF_01,singapore,1422,kg,720,,NORDIC EXCIPIENTS,2024-12-23 23:30:33
+INV-0324,EXC-041,Lactose monohydrate grade E,Excipient,PH_INF_01,Houston,2263,kg,620,,Nordic Excipients,2024-12-19 07:15:20
+INV-0324,EXC-041,Lactose monohydrate grade E,Excipient,PH_INF_01,Houston,2263,kg,620,,Nordic Excipients,2024-12-19 07:15:20
+INV-0325,EXC-042,Microcrystalline cellulose grade E,Excipient,PH_RESP_01,Wuxi,802,kg,,,Nordic Excipients,2024-12-30 13:44:06
+INV-0326,EXC-042,Microcrystalline cellulose grade E,Excipient,,Dublin,1187,kg,340,2025-02-27,Nordic Excipients,2024-12-23 09:17:08
+INV-0327,EXC-042,Microcrystalline cellulose grade E,Excipient,PH_RESP_01,Singapore,1407,kg,,,NORDIC EXCIPIENTS,2024-12-13 15:07:53
+INV-0328,EXC-042,Microcrystalline cellulose grade E,Excipient,PH_RESP_01,Houston,"2,284",kg,0,,Nordic Excipients,2024-12-18 15:53:21
+INV-0329,EXC-043,Magnesium stearate grade E,Excipient,PH_NEU_02,Wuxi,565,kg,1490,2025-01-19,Nordic Excipients,2024-12-19 11:15:57
+INV-0330,EXC-043,Magnesium stearate grade E,Excipient,PH_NEU_02,Dublin,4183,kg,1420,,NORDIC EXCIPIENTS,2024-12-25 22:49:23
+INV-0331,EXC-043,Magnesium stearate grade E,Excipient,PH_NEU_02,Singapore,3053,kg,1050,,Nordic Excipients,2024-12-14 04:36:51
+INV-0332,EXC-043,Magnesium stearate grade E,Excipient,PH_NEU_02,Houston,1948,kg,670,,Nordic Excipients,2024-12-19 05:28:38
+INV-0333,EXC-044,Povidone grade E,Excipient,PH_INF_02,Wuxi,361,kg,240,2025-02-23,Apex Ingredients,2024-12-12 05:01:02
+INV-0334,EXC-044,Povidone grade E,Excipient ,PH_INF_02,Dublin,"4,469",kg,1170,,Apex Ingredients,2024-12-13 16:53:06
+INV-0335,EXC-044,Povidone grade E,Excipient,PH_INF_02,Singapore,1387,kg,500,,Apex Ingredients,2024-12-25 21:02:26
+INV-0335,EXC-044,Povidone grade E,Excipient,PH_INF_02,Singapore,1998,kg,500,,Apex Ingredients,2024-12-02 21:02:26
+INV-0336,EXC-044,Povidone grade E,Excipient,PH_INF_02,Houston,1331,kg,820,2025-01-30,Apex Ingredients,2024-12-25 09:10:34
+INV-0337,EXC-045,Croscarmellose sodium grade E,Excipient,,Wuxi,2639,kg,1000,,Nordic Excipients,2024-12-14 20:34:39
+INV-0338,EXC-045,Croscarmellose sodium grade E,Excipient,PH_CARD_02,Dublin,762,kg,820,2025-01-05,Nordic Excipients,2024-12-13 12:53:58
+INV-0339,EXC-045,Croscarmellose sodium grade E,Excipient,PH_CARD_02,Singapore,651,kg,520,,Nordic Excipients,2024-12-22 22:13:41
+INV-0340,EXC-045,Croscarmellose sodium grade E,Excipient,PH_CARD_02,Houston,783,kg,430,,Nordic Excipients,2024-12-28 20:14:18
+INV-0341,EXC-046,Talc grade E,Excipient,PH_GI_01,Wuxi,1690,kg,450,2025-01-18,APEX INGREDIENTS,2024-12-14 15:05:26
+INV-0342,EXC-046,Talc grade E,Excipient,PH_GI_01,Dublin,623,kg,240,01/02/2025,Apex Ingredients,2024-12-21 05:04:33
+INV-0343,EXC-046,Talc grade E,Excipient,PH_GI_01,Singapore,495,kg,1250,2025-02-05,Apex Ingredients,2024-12-27 11:35:42
+INV-0344,EXC-046,Talc grade E,Excipient,PH_GI_01,Houston,386,kg,290,2025-01-23,Apex Ingredients,2024-12-26 23:17:21
+INV-0345,EXC-047,Colloidal silicon dioxide grade E,Excipient,PH_CARD_01,wuxi,932,kg,320,,Apex Ingredients,2024-12-25 00:43:38
+INV-0346,EXC-047,Colloidal silicon dioxide grade E,Excipient,PH_CARD_01,Dublin,"1,444",kg,510,,Apex Ingredients,2024-12-18 21:06:26
+INV-0347,EXC-047,Colloidal silicon dioxide grade E,Excipient,PH_CARD_01,Singapore,2643,kg,770,2025-02-03,Apex Ingredients,2024-12-25 03:21:48
+INV-0348,EXC-047,Colloidal silicon dioxide grade E,Excipient,PH_CARD_01,Houston,1281,kg,620,23-Feb-2025,Apex Ingredients,2024-12-23 09:10:30
+INV-0349,EXC-048,Hypromellose grade E,Excipient,PH_IMM_01,Wuxi,619,kg,820,2025-02-04,Evergreen Materials,2024-12-27 01:24:44
+INV-0350,EXC-048,Hypromellose grade E,Excipient,PH_IMM_01,Dublin,523,kg,340,,Evergreen Materials,31/12/2024 14:58
+INV-0351,EXC-048,Hypromellose grade E,Excipient,PH_IMM_01,Singapore,2063,kg,770,2025-01-12,Evergreen Materials,2024-12-19 18:26:36
+INV-0352,EXC-048,Hypromellose grade E,Excipient,PH_IMM_01,Houston,1044,kg,540,,Evergreen Materials,2024-12-13 21:55:51
+INV-0353,EXC-049,Mannitol grade E,Excipient,PH_RESP_01,Wuxi,1082,kg,420,2025-02-09,Evergreen Materials,2024-12-19 08:16:01
+INV-0354,EXC-049,Mannitol grade E,Excipient,PH_RESP_01,Dublin,1575,kg,940,,Evergreen Materials,2024-12-21 02:06:31
+INV-0355,EXC-049,Mannitol grade E,Excipient,PH_RESP_01,Singapore ,87,kg,200,2025-02-06,Evergreen Materials,2024-12-23 23:05:07
+INV-0356,EXC-049,Mannitol grade E,Excipient,PH_RESP_01,Houston,2024,kg,590,2025-02-15,Evergreen Materials,2024-12-22 16:11:20
+INV-0357,EXC-050,Pregelatinised starch grade E,Excipient,PH_ONC_02,wuxi,3874,kg,1040,2025-02-14,Evergreen Materials,2024-12-18 20:09:03
+INV-0358,EXC-050,Pregelatinised starch grade E,Excipient,PH_ONC_02,Dublin,1551,kg,800,,Evergreen Materials,2024-12-25 13:01:11
+INV-0359,EXC-050,Pregelatinised starch grade E,Excipient,PH_ONC_02,Singapore,1619,kg,420,2025-02-10,Evergreen Materials,2024-12-15 21:18:46
+INV-0360,EXC-050,Pregelatinised starch grade E,Excipient ,PH_ONC_02,Houston,690,kg,470,,Evergreen Materials,2024-12-31 10:20:50
+INV-0361,PKG-001,Blister foil type 1,Packaging,PH_IMM_02,Wuxi,73468,units,23500,,Kestrel Packaging,2024-12-25 06:52:18
+INV-0362,PKG-001,Blister foil type 1,Packaging,PH_IMM_02,Dublin,109846,units,31000,,Kestrel Packaging,15/12/2024 16:05
+INV-0363,PKG-001,Blister foil type 1,Packaging,PH_IMM_02,Singapore,13416,units,8500,,Kestrel Packaging,2024-12-26 11:07:24
+INV-0364,PKG-001,Blister foil type 1,Packaging,PH_IMM_02,Houston,0,units,6500,2025-01-22,Kestrel Packaging,2024-12-28 12:27:04
+INV-0365,PKG-002,HDPE bottle type 1,Packaging,PH_RESP_01,Wuxi,66179,units,18500,,Kestrel Packaging,2024-12-16 07:02:43
+INV-0366,PKG-002,HDPE bottle type 1,Packaging,PH_RESP_01,Dublin,16049,units,7500,2025-01-20,Kestrel Packaging,2024-12-12 10:06:31
+INV-0367,PKG-002,HDPE bottle type 1,Packaging ,PH_RESP_01,Singapore,19830,units,14500,,Kestrel Packaging,2024-12-29 09:08:17
+INV-0368,PKG-002,HDPE bottle type 1,Packaging,PH_RESP_01,Houston,148606,units,47000,,Kestrel Packaging,2024-12-22 07:30:42
+INV-0369,PKG-003,Carton type 1,Packaging,PH_INF_02,Wuxi,157201,units,45000,,Global Foils,2024-12-19 14:47:05
+INV-0370,PKG-003,Carton type 1,Packaging,PH_INF_02,Dublin,120524,units,35500,,Global Foils,2024-12-27 15:53:49
+INV-0371,PKG-003,Carton type 1,Packaging,PH_INF_02,Singapore,86452,units,43500,,Global Foils,2024-12-18 00:29:46
+INV-0372,PKG-003,Carton type 1,Packaging,PH_INF_02,Houston,46082,units,14000,,Global Foils,2024-12-20 00:44:59
+INV-0373,PKG-004,Patient leaflet type 1,Packaging,PH_INF_02,Wuxi,14533,units,19000,2025-01-05,Kestrel Packaging,2024-12-31 23:53:16
+INV-0374,PKG-004,Patient leaflet type 1,Packaging,PH_INF_02,Dublin,23575,units,6000,,Kestrel Packaging,2024-12-22 00:22:48
+INV-0375,PKG-004,Patient leaflet type 1,Packaging,PH_INF_02,Singapore,124818,units,35000,,Kestrel Packaging,2024-12-26 02:58:55
+INV-0376,PKG-004,Patient leaflet type 1,Packaging,PH_INF_02,Houston,"81,076",units,31000,,Kestrel Packaging,2024-12-19 21:32:49
+INV-0377,PKG-005,Label roll type 1,Packaging,PH_ONC_01,Wuxi,126502,units,33000,,Global Foils,2024-12-15 09:48:30
+INV-0378,PKG-005,Label roll type 1,Packaging,PH_ONC_01,Dublin,"37,795",units,30000,,Global Foils,2024-12-20 22:44:16
+INV-0379,PKG-005,Label roll type 1,Packaging,PH_ONC_01,Singapore,25060,units,9000,,Global Foils,2024-12-21 01:49:52
+INV-0380,PKG-005,Label roll type 1,Packaging,PH_ONC_01,Houston ,130509,units,47500,,Global Foils,2024-12-18 06:40:03
+INV-0381,PKG-006,Child-resistant cap type 1,Packaging,PH_NEU_02,Wuxi,112110,units,31000,2025-02-25,Global Foils,2024-12-12 08:52:17
+INV-0382,PKG-006,Child-resistant cap type 1,Packaging,PH_NEU_02,Dublin,18251,units,38000,22-Jan-2025,Global Foils,2024-12-26 14:19:06
+INV-0383,PKG-006,Child-resistant cap type 1,Packaging,PH_NEU_02,Singapore,22082,units,35000,,Global Foils,2024-12-16 16:48:05
+INV-0384,PKG-006,Child-resistant cap type 1,Packaging,PH_NEU_02,Houston,72643,units,40500,,Global Foils,2024-12-15 13:55:10
+INV-0385,PKG-007,PVC film type 1,Packaging,PH_ONC_01,Wuxi,74862,units,43500,,Kestrel Packaging,2024-12-30 13:23:48
+INV-0386,PKG-007,PVC film type 1,Packaging,PH_ONC_01,Dublin,158020,units,43000,,Kestrel Packaging,2024-12-19 07:47:49
+INV-0387,PKG-007,PVC film type 1,Packaging,PH_ONC_01,Singapore,59735,units,21000,,Kestrel Packaging,2024-12-12 04:06:04
+INV-0388,PKG-007,PVC film type 1,Packaging,PH_ONC_01,Houston,57908,units,31000,,Kestrel Packaging,2024-12-19 18:10:37
+INV-0389,PKG-008,Blister foil type 2,Packaging,PH_INF_01,Wuxi,107760,units,49000,,Global Foils,2024-12-19 20:07:03
+INV-0390,PKG-008,Blister foil type 2,Packaging,PH_INF_01,Dublin,86639,units,36000,2025-01-27,Global Foils,2024-12-31 08:29:41
+INV-0391,PKG-008,Blister foil type 2,Packaging,PH_INF_01,Singapore,135612,units,42500,,Global Foils,2024-12-25 12:25:43
+INV-0392,PKG-008,Blister foil type 2,Packaging,PH_INF_01,Houston,17627,units,6500,2025-01-19,Global Foils,2024-12-12 07:36:46
+INV-0393,PKG-009,HDPE bottle type 2,Packaging,PH_CARD_02,Wuxi,61280,units,37000,20/01/2025,Kestrel Packaging,2024-12-13 04:00:06
+INV-0394,PKG-009,HDPE bottle type 2,Packaging,PH_CARD_02,Dublin,3004,units,6500,2025-01-25,Kestrel Packaging,2024-12-30 13:07:34
+INV-0395,PKG-009,HDPE bottle type 2,Packaging,PH_CARD_02,Singapore,139862,units,39000,,Kestrel Packaging,2024-12-26 21:25:34
+INV-0396,PKG-009,HDPE bottle type 2,Packaging,PH_CARD_02,Houston,"9,334",units,10000,2025-01-16,Kestrel Packaging,2024-12-19 23:34:44
+INV-0397,PKG-010,Carton type 2,Packaging,PH_INF_02,Wuxi,107681,units,39500,,Global Foils,2024-12-23 14:19:54
+INV-0398,PKG-010,Carton type 2,Packaging,PH_INF_02,Dublin,33766,units,19000,2025-01-19,Global Foils,2024-12-12 01:38:20
+INV-0399,PKG-010,Carton type 2,Packaging,PH_INF_02,Singapore,37903,units,25000,2025-02-14,Global Foils,2024-12-26 20:04:24
+INV-0400,PKG-010,Carton type 2,Packaging,PH_INF_02,Houston,10054,units,6000,,Global Foils,2024-12-25 08:45:30
+INV-0401,PKG-011,Patient leaflet type 2,Packaging,PH_INF_02,Wuxi,91632,units,24000,,Kestrel Packaging,2024-12-17 05:43:31
+INV-0402,PKG-011,Patient leaflet type 2,Packaging,PH_INF_02,Dublin,-19988,units,10000,2025-02-25,Kestrel Packaging,2024-12-24 02:31:21
+INV-0403,PKG-011,Patient leaflet type 2,Packaging,PH_INF_02,Singapore,133438,units,40500,2025-01-08,Kestrel Packaging,2024-12-31 19:12:49
+INV-0404,PKG-011,Patient leaflet type 2,Packaging,PH_INF_02,Houston,124436,units,33000,2025-02-28,Kestrel Packaging,2024-12-21 22:17:18
+INV-0405,PKG-012,Label roll type 2,Packaging,PH_RESP_01,Wuxi,52604,units,18500,2025-01-25,Global Foils,2024-12-16 19:29:56
+INV-0406,PKG-012,Label roll type 2,Packaging,PH_RESP_01,Dublin,97531,units,38500,2025-01-08,Global Foils,2024-12-13 22:35:19
+INV-0407,PKG-012,Label roll type 2,Packaging,PH_RESP_01,Singapore,121426,units,39500,,Global Foils,2024-12-18 05:37:28
+INV-0408,PKG-012,Label roll type 2,Packaging,PH_RESP_01,Houston,,units,43500,,Global Foils,2024-12-26 02:21:12
+INV-0409,PKG-013,Child-resistant cap type 2,Packaging,PH_RESP_01,Wuxi,67659,units,45000,2025-02-06,PharmaPack Co,2024-12-26 07:14:51
+INV-0410,PKG-013,Child-resistant cap type 2,packaging,PH_RESP_01,Dublin,19619,units,9000,2025-02-24,PharmaPack Co,2024-12-30 00:33:46
+INV-0411,PKG-013,Child-resistant cap type 2,Packaging,PH_RESP_01,Singapore,-8158,units,15500,2025-02-05,PharmaPack Co,2024-12-27 11:19:13
+INV-0412,PKG-013,Child-resistant cap type 2,Packaging,PH_RESP_01,Houston,150806,units,40000,2025-01-09,PharmaPack Co,2024-12-17 21:46:49
+INV-0413,PKG-014,PVC film type 2,Packaging,PH_GI_01,Wuxi,115979,units,32500,,Kestrel Packaging,2024-12-14 10:30:45
+INV-0414,PKG-014,PVC film type 2,Packaging,PH_GI_01,Dublin,96318,units,38000,,Kestrel Packaging,2024-12-26 09:46:04
+INV-0415,PKG-014,PVC film type 2,Packaging,PH_GI_01,Singapore,42994,units,34500,,Kestrel Packaging,2024-12-13 22:50:05
+INV-0416,PKG-014,PVC film type 2,Packaging,PH_GI_01,Houston,48249,units,17000,2025-02-15,KESTREL PACKAGING,2024-12-21 05:41:16
+INV-0417,PKG-015,Blister foil type 3,Packaging,PH_IMM_02,Wuxi,151086,units,40000,,PharmaPack Co,2024-12-18 18:49:39
+INV-0418,PKG-015,Blister foil type 3,Packaging,PH_IMM_02,Dublin,,units,29500,2024-12-01,PharmaPack Co,2024-12-12 17:14:50
+INV-0419,PKG-015,Blister foil type 3,Packaging,PH_IMM_02,Singapore,27776,units,8500,,PharmaPack Co,2024-12-25 05:33:44
+INV-0420,PKG-015,Blister foil type 3,Packaging,PH_IMM_02,Houston,103770,units,40000,,PharmaPack Co,2024-12-17 02:09:12
+INV-0421,PKG-016,HDPE bottle type 3,Packaging,PH_IMM_01,Wuxi,27658,units,9500,2025-02-26,Global Foils,2024-12-28 11:51:53
+INV-0421,PKG-016,HDPE bottle type 3,Packaging,PH_IMM_01,Wuxi,27658,units,9500,2025-02-26,Global Foils,2024-12-28 11:51:53
+INV-0422,PKG-016,HDPE bottle type 3,Packaging,PH_IMM_01,Dublin,84438,units,41500,,Global Foils,2024-12-12 12:34:24
+INV-0423,PKG-016,HDPE bottle type 3,Packaging,PH_IMM_01,Singapore,24389,units,6500,2025-02-01,Global Foils,2024-12-17 17:17:32
+INV-0424,PKG-016,HDPE bottle type 3,Packaging,PH_IMM_01,Houston,103717,units,33500,,Global Foils,2024-12-13 10:49:21
+INV-0425,PKG-017,Carton type 3,Packaging,PH_NEU_02,Wuxi,45204,units,17500,,Kestrel Packaging,2024-12-18 05:25:52
+INV-0426,PKG-017,Carton type 3,Packaging,PH_NEU_02,Dublin,98114,units,25500,,Kestrel Packaging,2024-12-25 11:05:07
+INV-0427,PKG-017,Carton type 3,Packaging,PH_NEU_02,Singapore,53244,units,19500,,Kestrel Packaging,2024-12-19 01:52:12
+INV-0428,PKG-017,Carton type 3,Packaging,PH_NEU_02,Houston,"37,130",units,9500,,Kestrel Packaging,2024-12-31 10:44:40
+INV-0429,PKG-018,Patient leaflet type 3,Packaging,PH_CARD_01,Wuxi,89561,units,46500,2025-01-22,PharmaPack Co,2024-12-17 08:55:04
+INV-0430,PKG-018,Patient leaflet type 3,Packaging,PH_CARD_01,Dublin,169564,units,46500,,PharmaPack Co,2024-12-25 15:13:52
+INV-0431,PKG-018,Patient leaflet type 3,Packaging,PH_CARD_01,Singapore,36236,units,11000,,PharmaPack Co,2024-12-20 22:19:14
+INV-0432,PKG-018,Patient leaflet type 3,Packaging,PH_CARD_01,Houston,22730,units,9000,2025-01-07,PharmaPack Co,2024-12-22 22:17:22
+INV-0433,PKG-019,Label roll type 3,Packaging,PH_RESP_01,Wuxi,61683,units,33500,2025-02-17,Global Foils,2024-12-24 15:54:07
+INV-0434,PKG-019,Label roll type 3,Packaging,PH_RESP_01,dublin,37506,units,49500,2025-01-04,Global Foils,22/12/2024 20:01
+INV-0435,PKG-019,Label roll type 3,Packaging,PH_RESP_01,Singapore,7677,units,26500,2025-01-15,Global Foils,2024-12-24 11:38:51
+INV-0436,PKG-019,Label roll type 3,Packaging,PH_RESP_01,Houston,27891,units,10500,2025-02-07,Global Foils,2024-12-27 16:48:28
+INV-0437,PKG-020,Child-resistant cap type 3,Packaging,PH_CARD_02,Wuxi,54875,units,21500,,Global Foils,2024-12-18 11:11:53
+INV-0438,PKG-020,Child-resistant cap type 3,Packaging,PH_CARD_02,Dublin,70720,units,25000,,Global Foils,2024-12-20 00:04:08
+INV-0439,PKG-020,Child-resistant cap type 3,Packaging,PH_CARD_02,Singapore,28387,units,15500,,Global Foils,2024-12-21 12:26:19
+INV-0440,PKG-020,Child-resistant cap type 3,Packaging,PH_CARD_02,Houston,190299,units,48500,,Global Foils,2024-12-15 04:27:06
+INV-0441,PKG-021,PVC film type 3,Packaging,PH_ONC_02,Wuxi,21688,units,9000,,PharmaPack Co,2024-12-23 21:24:03
+INV-0442,PKG-021,PVC film type 3,Packaging,PH_ONC_02,Dublin,67789,units,43000,,PharmaPack Co,2024-12-26 17:52:04
+INV-0443,PKG-021,PVC film type 3,Packaging,PH_ONC_02,Singapore,9530,units,5000,17-Feb-2025,PharmaPack Co,2024-12-31 00:59:34
+INV-0444,PKG-021,PVC film type 3,Packaging,PH_ONC_02,Houston,92231,units,40000,,PharmaPack Co,2024-12-17 14:17:58
+INV-0445,PKG-022,Blister foil type 4,Packaging,PH_CARD_02,Wuxi,"164,790",units,47000,2025-01-31,Global Foils,19/12/2024 03:16
+INV-0446,PKG-022,Blister foil type 4,Packaging,PH_CARD_02,Dublin,104988,units,31000,,Global Foils,2024-12-28 07:55:28
+INV-0447,PKG-022,Blister foil type 4,Packaging,PH_CARD_02,Singapore,20970,units,15000,,Global Foils,2024-12-18 23:57:42
+INV-0448,PKG-022,Blister foil type 4,Packaging,PH_CARD_02,Houston,86498,units,22000,,Global Foils,2024-12-26 21:19:35
+INV-0448,PKG-022,Blister foil type 4,Packaging,PH_CARD_02,Houston,86871,units,22000,,Global Foils,2024-12-16 21:19:35
+INV-0449,PKG-023,HDPE bottle type 4,Packaging,PH_NEU_02,Wuxi,115934,units,47000,2025-01-24,PharmaPack Co,2024-12-17 22:36:48
+INV-0450,PKG-023,HDPE bottle type 4,Packaging,PH_NEU_02,Dublin,17306,units,7000,,PharmaPack Co,2024-12-20 08:01:40
+INV-0451,PKG-023,HDPE bottle type 4,Packaging,PH_NEU_02,Singapore,69038,units,19500,,PHARMAPACK CO,2024-12-15 14:56:20
+INV-0452,PKG-023,HDPE bottle type 4,Packaging,PH_NEU_02,Houston,59953,units,,2024-12-05,PharmaPack Co,2024-12-14 04:32:49
+INV-0453,PKG-024,Carton type 4,Packaging,PH_INF_01,Wuxi,146520,units,38500,,PharmaPack Co,2024-12-20 08:48:49
+INV-0454,PKG-024,Carton type 4,Packaging,PH_INF_01,Dublin,86259,units,27000,,PharmaPack Co,2024-12-17 02:55:33
+INV-0455,PKG-024,Carton type 4,Packaging,PH_INF_01,Singapore,99009,units,30500,,PharmaPack Co,2024-12-14 15:17:57
+INV-0456,PKG-024,Carton type 4,Packaging,PH_INF_01,Houston,79347,units,37500,2025-01-12,PharmaPack Co,2024-12-13 09:06:17
+INV-0457,PKG-025,Patient leaflet type 4,Packaging,PH_ONC_01,Wuxi,26758,units,16000,,PharmaPack Co,2024-12-22 03:40:29
+INV-0458,PKG-025,Patient leaflet type 4,Packaging,PH_ONC_01,Dublin,-26881,units,21500,2025-02-12,PharmaPack Co,2024-12-12 18:38:47
+INV-0459,PKG-025,Patient leaflet type 4,Packaging,PH_ONC_01,Singapore,3237,units,15000,2025-01-08,PharmaPack Co,2024-12-17 20:16:42
+INV-0460,PKG-025,Patient leaflet type 4,Packaging,PH_ONC_01,Houston,,units,18500,,PharmaPack Co,2024-12-27 17:24:04
+INV-0461,PKG-026,Label roll type 4,Packaging,PH_IMM_01,Wuxi,124692,units,38500,,Global Foils,2024-12-15 22:49:53
+INV-0462,PKG-026,Label roll type 4,Packaging,PH_IMM_01,Dublin,101714,units,40500,,Global Foils,2024-12-24 17:46:20
+INV-0462,PKG-026,Label roll type 4,Packaging,PH_IMM_01,Dublin,134325,units,40500,,Global Foils,2024-12-01 17:46:20
+INV-0463,PKG-026,Label roll type 4,Packaging,PH_IMM_01,Singapore,35591,units,10000,,Global Foils,2024-12-19 19:03:20
+INV-0464,PKG-026,Label roll type 4,Packaging,PH_IMM_01,Houston,27951,units,22000,10/01/2025,Global Foils,2024-12-14 09:56:53
+INV-0465,PKG-027,Child-resistant cap type 4,Packaging,PH_ONC_01,wuxi,51694,units,22000,,KESTREL PACKAGING,2024-12-29 21:38:37
+INV-0466,PKG-027,Child-resistant cap type 4,Packaging,PH_ONC_01,Dublin,80441,units,43500,,Kestrel Packaging,2024-12-21 12:40:19
+INV-0467,PKG-027,Child-resistant cap type 4,Packaging,,Singapore,0,units,10500,2025-02-02,KESTREL PACKAGING,17/12/2024 05:01
+INV-0468,PKG-027,Child-resistant cap type 4,Packaging,PH_ONC_01,Houston,36590,units,12500,,Kestrel Packaging,2024-12-14 02:38:00
+INV-0469,PKG-028,PVC film type 4,Packaging,PH_IMM_01,Wuxi,35591,units,26000,2025-01-07,Global Foils,2024-12-13 18:52:49
+INV-0470,PKG-028,PVC film type 4,Packaging,PH_IMM_01,Dublin,"63,662",units,46000,2025-01-07,Global Foils,2024-12-27 00:41:08
+INV-0471,PKG-028,PVC film type 4,Packaging,PH_IMM_01,Singapore,61675,units,34000,,Global Foils,2024-12-18 03:00:18
+INV-0472,PKG-028,PVC film type 4,Packaging,PH_IMM_01,Houston,153048,units,38500,,Global Foils,2024-12-30 19:53:27
+INV-0473,PKG-029,Blister foil type 5,Packaging,PH_GI_01,WUXI,165885,units,0,,Kestrel Packaging,2024-12-23 14:20:02
+INV-0474,PKG-029,Blister foil type 5,Packaging,PH_GI_01,Dublin,23405,units,6500,,Kestrel Packaging,2024-12-26 06:24:02
+INV-0475,PKG-029,Blister foil type 5,Packaging,PH_GI_01,Singapore,36649,units,22000,,Kestrel Packaging,16/12/2024 11:23
+INV-0476,PKG-029,Blister foil type 5,Packaging,PH_GI_01,Houston,22299,units,35000,2025-01-15,Kestrel Packaging,2024-12-20 12:00:29
+INV-0477,PKG-030,HDPE bottle type 5,Packaging,PH_CARD_01,Wuxi,108764,units,28000,,Global Foils,2024-12-13 10:15:40
+INV-0478,PKG-030,HDPE bottle type 5,Packaging,PH_CARD_01,Dublin,55602,units,25000,2025-01-25,Global Foils,2024-12-18 17:48:49
+INV-0479,PKG-030,HDPE bottle type 5,Packaging,PH_CARD_01,Singapore,47346,units,27500,,Global Foils,2024-12-15 02:04:43
+INV-0480,PKG-030,HDPE bottle type 5,Packaging,PH_CARD_01,Houston,23766,units,40000,2024-12-26,Global Foils,2024-12-29 21:51:07
+INV-0481,PKG-031,Carton type 5,Packaging,PH_IMM_02,Wuxi,23216,units,11000,,Kestrel Packaging,2024-12-14 21:12:54
+INV-0482,PKG-031,Carton type 5,Packaging,PH_IMM_02,dublin,32646,units,9500,,Kestrel Packaging,2024-12-21 19:15:26
+INV-0483,PKG-031,Carton type 5,Packaging,PH_IMM_02,Singapore,82891,units,25500,,Kestrel Packaging,2024-12-26 08:38:39
+INV-0484,PKG-031,Carton type 5,Packaging,PH_IMM_02,Houston,,units,26000,,Kestrel Packaging,2024-12-29 14:47:59
+INV-0485,PKG-032,Patient leaflet type 5,Packaging,PH_GI_01,Wuxi,73328,units,23500,2025-02-08,PharmaPack Co,2024-12-20 09:49:23
+INV-0485,PKG-032,Patient leaflet type 5,Packaging,PH_GI_01,Wuxi,73328,units,23500,2025-02-08,PharmaPack Co,2024-12-20 09:49:23
+INV-0486,PKG-032,Patient leaflet type 5,Packaging,PH_GI_01,Dublin,44391,units,13000,,PharmaPack Co,2024-12-22 11:23:50
+INV-0487,PKG-032,Patient leaflet type 5,Packaging,PH_GI_01,Singapore,"40,772",units,25500,,PharmaPack Co,2024-12-16 00:31:03
+INV-0488,PKG-032,Patient leaflet type 5,Packaging,PH_GI_01,Houston,"27,590",units,19500,,PharmaPack Co,2024-12-21 04:31:20
+INV-0489,PKG-033,Label roll type 5,Packaging,PH_IMM_02,Wuxi,29088,units,45000,2025-01-28,PharmaPack Co,2024-12-15 23:47:02
+INV-0490,PKG-033,Label roll type 5,Packaging,PH_IMM_02,Dublin,87221,units,26000,,PharmaPack Co,2024-12-31 23:45:23
+INV-0491,PKG-033,Label roll type 5,Packaging,PH_IMM_02,Singapore,139403,units,37500,,PharmaPack Co,2024-12-19 07:26:11
+INV-0492,PKG-033,Label roll type 5,Packaging,PH_IMM_02,Houston,133696,units,44000,,PharmaPack Co,2024-12-21 07:32:32
+INV-0492,PKG-033,Label roll type 5,Packaging,PH_IMM_02,Houston,145624,units,44000,,PharmaPack Co,2024-11-28 07:32:32
+INV-0493,PKG-034,Child-resistant cap type 5,Packaging,PH_IMM_01,Wuxi,24431,units,28500,2025-01-22,Kestrel Packaging,2024-12-18 01:42:20
+INV-0494,PKG-034,Child-resistant cap type 5,Packaging,PH_IMM_01,Dublin,18017,units,6000,,Kestrel Packaging,2024-12-29 03:36:08
+INV-0495,PKG-034,Child-resistant cap type 5,Packaging,PH_IMM_01,Singapore,59040,units,37000,,Kestrel Packaging,2024-12-21 22:21:40
+INV-0496,PKG-034,Child-resistant cap type 5,Packaging,PH_IMM_01,Houston,59550,units,40000,20-Feb-2025,Kestrel Packaging,2024-12-28 19:33:00
+INV-0497,PKG-035,PVC film type 5,Packaging,PH_RESP_01,Wuxi,4733,units,19500,2025-01-24,Global Foils,2024-12-17 23:26:48
+INV-0498,PKG-035,PVC film type 5,packaging,PH_RESP_01,Dublin,26815,units,8500,2025-02-08,Global Foils,2024-12-22 19:59:33
+INV-0499,PKG-035,PVC film type 5,Packaging,PH_RESP_01,Singapore,70144,units,28500,,Global Foils,2024-12-25 01:18:32
+INV-0500,PKG-035,PVC film type 5,Packaging,PH_RESP_01,Houston,43474,units,12000,,Global Foils,2024-12-21 05:35:26
